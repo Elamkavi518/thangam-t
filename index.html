@@ -1,3 +1,7 @@
+Content is user-generated and unverified.
+
+
+Learn how to customize
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -237,4 +241,1914 @@
   .order-top .od{font-size:11px;color:var(--muted2);margin-top:2px;}
   .order-status{font-size:10px;text-transform:uppercase;letter-spacing:.08em;padding:3px 8px;border-radius:20px;background:rgba(23,21,16,.15);color:var(--gold-bright);font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
   .order-actions{display:flex;gap:14px;margin-top:8px;}
-  .order-actions button{background:none;border:none;color:var(--mu
+  .order-actions button{background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;}
+  .order-actions button:hover{color:var(--gold-bright);}
+  .pending-row{padding:14px 0;border-bottom:1px solid var(--line-soft);}
+  .pending-row:last-child{border-bottom:none;}
+  .pending-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;}
+  .pending-top .pn{font-size:14px;color:var(--ivory);font-weight:600;}
+  .pending-top .pm{font-size:11px;color:var(--muted2);margin-top:2px;}
+  .pending-text{font-size:13px;color:var(--text2);margin:8px 0;}
+  .pending-photo{max-height:70px;border-radius:3px;margin-bottom:8px;border:1px solid var(--line);}
+  .pending-actions{display:flex;gap:14px;}
+  .pending-actions button{background:none;border:none;font-size:12px;cursor:pointer;text-decoration:underline;padding:0;}
+  .pa-approve{color:var(--gold-bright);} .pa-reject{color:var(--muted);}
+  .star-pick svg{width:22px;height:22px;cursor:pointer;color:#D8D2C2;transition:color .1s;}
+  .star-pick svg.on{color:var(--gold);fill:var(--gold);}
+  .dash-panel{display:none;} .dash-panel.active{display:block;}
+  .offer-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+  @media(max-width:700px){.offer-row{grid-template-columns:1fr;}}
+
+  /* reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){.reviews-grid{grid-template-columns:1fr;}}
+  .review-card{padding:24px;}
+  .stars{margin-bottom:14px;}
+  .review-text{font-size:14px;color:var(--text3);line-height:1.6;margin-bottom:18px;}
+  .review-name{color:var(--ivory);font-weight:600;font-size:14px;}
+  .review-role{font-size:12px;color:var(--muted2);}
+
+  /* faq */
+  .faq-item{margin-bottom:12px;overflow:hidden;}
+  .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:none;border:none;color:var(--ivory);font-size:14px;font-weight:500;text-align:left;cursor:pointer;}
+  .faq-a{padding:0 22px 20px;font-size:14px;color:var(--text2);line-height:1.6;display:none;}
+  .faq-item.open .faq-a{display:block;}
+  .faq-item.open svg.chev-down{display:none;} .faq-item:not(.open) svg.chev-up{display:none;}
+
+  /* contact / platform contacts */
+  .contact-grid, .pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:800px){.contact-grid,.pc-grid{grid-template-columns:1fr;}}
+  .contact-info a, .contact-info p{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text2);margin-bottom:14px;}
+  .contact-info a:hover{color:var(--gold-bright);}
+  .whatsnext{margin-top:20px;padding:20px;}
+  .whatsnext ul{list-style:none;margin:0;padding:0;}
+  .whatsnext li{display:flex;gap:8px;color:var(--text3);font-size:14px;margin-bottom:10px;}
+  .pc-card{padding:28px;}
+  .pc-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .pc-head p.name{color:var(--ivory);font-weight:600;margin:0;}
+  .pc-head p.role{font-size:12px;color:var(--muted);margin:2px 0 0;}
+  .pc-card .contact-info{font-size:14px;}
+  .pc-note{font-size:12px;color:var(--muted2);line-height:1.5;margin-top:10px;}
+
+  footer{max-width:1280px;margin:0 auto;padding:36px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted2);}
+  footer .flogo{display:flex;align-items:center;gap:10px;}
+
+  /* modal */
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:100;padding:16px;}
+  .modal-overlay.open{display:flex;}
+  .modal-box{width:100%;max-width:420px;background:var(--panel2);border:1px solid rgba(23,21,16,.3);border-radius:3px;padding:26px;position:relative;}
+  .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--muted);cursor:pointer;}
+  .modal-title{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+  .modal-name{font-family:'Fraunces',serif;font-size:24px;color:var(--ivory);margin-bottom:4px;}
+  .modal-call{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--gold-bright);margin-bottom:20px;}
+  .modal-field{margin-bottom:12px;}
+  .modal-fine{font-size:11px;color:var(--muted2);line-height:1.5;margin-top:8px;}
+  .modal-success{text-align:center;padding:20px 0;display:none;}
+  .modal-success.show{display:block;}
+  .modal-check{width:56px;height:56px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+
+  /* welcome screen */
+  #welcome-screen{position:fixed;inset:0;z-index:200;background:#FFFFFF;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .7s ease, visibility .7s ease;}
+  #welcome-screen.hide{opacity:0;visibility:hidden;pointer-events:none;}
+  #welcome-particles{position:absolute;inset:0;overflow:hidden;}
+  .particle{position:absolute;bottom:-20px;border-radius:50%;background:radial-gradient(circle, rgba(23,21,16,.28) 0%, rgba(23,21,16,0) 72%);animation:floatUp linear infinite;}
+  @keyframes floatUp{ to{ transform:translateY(-110vh) translateX(var(--drift,0px)); opacity:0; } }
+  .welcome-content{position:relative;text-align:center;padding:0 24px;max-width:440px;}
+  .welcome-badge{width:80px;height:80px;margin:0 auto 26px;border-radius:50%;border:1.5px solid #17150F;display:flex;align-items:center;justify-content:center;opacity:0;animation:popIn .6s cubic-bezier(.2,.8,.2,1) .1s forwards;}
+  .welcome-badge span{font-family:'IBM Plex Mono',monospace;font-size:28px;color:#17150F;}
+  @keyframes popIn{ from{opacity:0; transform:scale(.7);} to{opacity:1; transform:scale(1);} }
+  .welcome-title{font-family:'Fraunces',serif;font-size:46px;color:#17150F;margin:0 0 14px;letter-spacing:.02em;opacity:0;animation:riseIn .7s cubic-bezier(.2,.8,.2,1) .3s forwards;}
+  .welcome-tagline{font-size:13px;color:#5A5548;line-height:1.7;margin:0 0 30px;opacity:0;animation:riseIn .7s cubic-bezier(.2,.8,.2,1) .48s forwards;}
+  @keyframes riseIn{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+  .welcome-bar{width:220px;height:2px;background:#EDEAE2;border-radius:2px;margin:0 auto 14px;overflow:hidden;opacity:0;animation:riseIn .5s ease .65s forwards;}
+  .welcome-bar-fill{height:100%;width:0%;background:#17150F;transition:width .15s ease-out;}
+  .welcome-loading{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9C9484;letter-spacing:.1em;margin:0 0 28px;opacity:0;animation:riseIn .5s ease .75s forwards;}
+  .welcome-enter{display:none;background:#17150F;color:#FFFFFF;border:1px solid #17150F;padding:12px 30px;border-radius:3px;font-size:13px;cursor:pointer;letter-spacing:.03em;transition:background .2s, color .2s;opacity:0;}
+  .welcome-enter.show{animation:riseIn .5s cubic-bezier(.2,.8,.2,1) forwards;}
+  .welcome-enter:hover{background:#FFFFFF;color:#17150F;}
+  @media(prefers-reduced-motion:reduce){ .welcome-badge, .welcome-title, .welcome-tagline, .welcome-bar, .welcome-loading, .particle{animation:none; opacity:1;} }
+</style>
+</head>
+<body>
+
+<!-- ============ WELCOME SCREEN ============ -->
+<div id="welcome-screen">
+  <div id="welcome-particles"></div>
+  <div class="welcome-content">
+    <div class="welcome-badge"><span>த</span></div>
+    <h1 class="welcome-title">Thangam</h1>
+    <p class="welcome-tagline" data-i18n="welcome_msg">Your smart gold companion. Compare prices, calculate jewelry value, find trusted stores, and make informed gold decisions with confidence.</p>
+    <div class="welcome-bar"><div class="welcome-bar-fill" id="welcome-bar-fill"></div></div>
+    <p class="welcome-loading" id="welcome-loading" data-i18n="welcome_loading">Loading your gold companion…</p>
+    <button class="welcome-enter" id="welcome-enter" data-i18n="welcome_enter">Enter Thangam</button>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="headrow">
+    <button class="logo" onclick="go('hero')">
+      <span class="badge badge-sm"><span>த</span></span>
+      <span class="name">Thangam</span>
+    </button>
+    <nav class="mainnav">
+      <button data-i18n="nav_rate" onclick="go('rate')">Gold Rate</button>
+      <button data-i18n="nav_calc" onclick="go('calculator')">Calculator</button>
+      <button data-i18n="nav_loans" onclick="go('loans')">Loans</button>
+      <button data-i18n="nav_jewelry" onclick="go('jewelry')">Jewelry</button>
+      <button data-i18n="nav_wastage" onclick="go('wastage')">Wastage</button>
+      <button data-i18n="nav_shop" onclick="go('shop')">Shop</button>
+      <button data-i18n="nav_dash" onclick="go('dashboards')">Dashboards</button>
+      <button data-i18n="nav_faq" onclick="go('faq')">FAQ</button>
+      <button data-i18n="nav_contact" onclick="go('contact')">Contact</button>
+      <button data-i18n="nav_contacts" onclick="go('platform-contacts')">Contacts</button>
+    </nav>
+    <div class="searchbox" id="searchbox">
+      <div class="searchbar">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="text" data-i18n-ph="search_ph" placeholder="Search rates, lenders, jewelry, FAQs…" autocomplete="off" />
+        <button class="mic-btn" id="mic-btn" title="Voice search">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </button>
+      </div>
+      <div class="suggest" id="suggest-box"></div>
+    </div>
+    <select id="lang-select" class="lang-select" title="Language">
+      <option value="en">EN · English</option>
+      <option value="hi">HI · हिन्दी</option>
+      <option value="ta">TA · தமிழ்</option>
+      <option value="te">TE · తెలుగు</option>
+      <option value="kn">KN · ಕನ್ನಡ</option>
+      <option value="ml">ML · മലയാളം</option>
+    </select>
+    <button class="cart-btn" id="cart-btn" onclick="toggleCart()" title="Cart">
+      <svg class="icon" viewBox="0 0 24 24" style="width:18px;height:18px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="cart-count" id="cart-count" style="display:none;">0</span>
+    </button>
+    <button class="btn btn-outline btn-sm signin-desktop" id="auth-btn" data-i18n="sign_in" onclick="handleAuthBtnClick()">Sign in</button>
+    <button class="hamburger" id="hamburger">
+      <svg class="icon" viewBox="0 0 24 24" style="width:22px;height:22px"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobilenav" id="mobilenav">
+    <div class="searchbar">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="search-input-m" type="text" data-i18n-ph="search_ph" placeholder="Search…" autocomplete="off" />
+    </div>
+    <select id="lang-select-m" class="lang-select" style="margin-top:12px;width:100%;" title="Language">
+      <option value="en">EN · English</option>
+      <option value="hi">HI · हिन्दी</option>
+      <option value="ta">TA · தமிழ்</option>
+      <option value="te">TE · తెలుగు</option>
+      <option value="kn">KN · ಕನ್ನಡ</option>
+      <option value="ml">ML · മലയാളം</option>
+    </select>
+    <div class="mnav-links">
+      <button data-i18n="nav_rate" onclick="go('rate')">Gold Rate</button>
+      <button data-i18n="nav_calc" onclick="go('calculator')">Calculator</button>
+      <button data-i18n="nav_loans" onclick="go('loans')">Loans</button>
+      <button data-i18n="nav_jewelry" onclick="go('jewelry')">Jewelry</button>
+      <button data-i18n="nav_wastage" onclick="go('wastage')">Wastage</button>
+      <button data-i18n="nav_shop" onclick="go('shop')">Shop</button>
+      <button data-i18n="nav_dash" onclick="go('dashboards')">Dashboards</button>
+      <button data-i18n="nav_faq" onclick="go('faq')">FAQ</button>
+      <button data-i18n="nav_contact" onclick="go('contact')">Contact</button>
+      <button data-i18n="nav_contacts" onclick="go('platform-contacts')">Contacts</button>
+      <button id="auth-btn-m" data-i18n="sign_in" onclick="handleAuthBtnClick()" style="border-top:1px solid var(--line);margin-top:8px;padding-top:14px;">Sign in</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ LOCATION BAR ============ -->
+<div class="locbar" id="locbar">
+  <div class="locbar-inner">
+    <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;color:var(--gold);flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span id="loc-text" data-i18n="loc_prompt">Show nearby verified stores by sharing your location.</span>
+    <button class="loc-btn" id="loc-detect-btn" data-i18n="loc_use_button" onclick="detectLocation()">Use my location</button>
+    <button class="loc-btn loc-btn-ghost" id="loc-change-btn" data-i18n="loc_change" onclick="toggleManualLoc()">Change manually</button>
+    <input id="loc-manual-input" class="loc-manual-input" data-i18n-ph="loc_manual_ph" placeholder="Enter your city" style="display:none" />
+  </div>
+</div>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
+
+<!-- ============ HERO ============ -->
+<section id="hero" style="position:relative;">
+  <div class="hero-dots"></div>
+  <span class="hero-wm">த</span>
+  <div class="hero-glow"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow"><span class="bar"></span><span>தங்கம் · Tamil for gold</span></div>
+      <h1 class="hero-h1"><span data-i18n="hero_h1_pre">Thangam — know what your gold is</span> <em data-i18n="hero_h1_em">really</em> <span data-i18n="hero_h1_post">worth.</span></h1>
+      <p class="hero-p" data-i18n="hero_p">Estimate jewelry value by weight and purity, compare gold loan offers side by side, and connect directly with retailers and lenders we've vetted — all before you walk into a branch.</p>
+      <div class="hero-actions">
+        <button class="btn" onclick="go('calculator')"><span data-i18n="hero_btn_value">Value my gold</span>
+          <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/></svg>
+        </button>
+        <button class="btn btn-outline" onclick="go('loans')"><span data-i18n="hero_btn_loans">Compare loans</span>
+          <svg class="icon" viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><path d="M5 21V9l7-6 7 6v12"/><line x1="9" y1="21" x2="9" y2="13"/></svg>
+        </button>
+      </div>
+      <div class="hero-highlights">
+        <span><svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;color:var(--gold)"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3z"/></svg><span data-i18n="hero_hl1">Verified partners</span></span>
+        <span><svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;color:var(--gold)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg><span data-i18n="hero_hl2">Rates updated hourly</span></span>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div class="card hero-card">
+        <div class="hero-card-top">
+          <div>
+            <p class="hero-rate-label" data-i18n="hero_card_label">Today's benchmark rate</p>
+            <p class="hero-rate-value" id="hero-rate-22"></p>
+          </div>
+          <span class="badge badge-lg"><span>22K</span></span>
+        </div>
+        <div class="hero-purity-grid" id="hero-purity-grid"></div>
+      </div>
+      <div class="hero-bis"><span class="badge badge-md"><span>BIS</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE RATE ============ -->
+<section id="rate" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_rate">Live Gold Rate</span></div>
+  <div class="rate-flex-head" style="margin-bottom:32px;">
+    <h2 class="h2" style="margin-bottom:0;" data-i18n="h2_rate">Today's gold rate</h2>
+    <div class="toggle-group">
+      <button class="toggle-btn active" data-view="22K" onclick="setRateView('22K')">22K</button>
+      <button class="toggle-btn" data-view="24K" onclick="setRateView('24K')">24K</button>
+    </div>
+  </div>
+  <div class="rate-grid">
+    <div class="card" style="padding:24px;">
+      <p class="hero-rate-label" id="rate-label"></p>
+      <p class="hero-rate-value" style="font-size:38px;margin:10px 0" id="rate-value"></p>
+      <p id="rate-change" style="font-size:14px;display:flex;align-items:center;gap:6px;"></p>
+      <p style="font-size:12px;color:var(--muted2);margin-top:16px;" data-i18n="rate_updated">Updated hourly · last refresh 09:00 IST</p>
+    </div>
+    <div class="card" style="padding:24px;position:relative;">
+      <p class="hero-rate-label" style="margin-bottom:16px;">30-day trend</p>
+      <svg id="chart-svg" viewBox="0 0 600 220" preserveAspectRatio="none"></svg>
+      <div class="chart-tooltip" id="chart-tooltip"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section id="calculator" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_calc">Gold Weight &amp; Purity Calculator</span></div>
+  <h2 class="h2" data-i18n="h2_calc">Estimate what your piece is worth</h2>
+  <p class="sub" style="margin-bottom:24px;"></p>
+  <div class="calc-grid">
+    <div class="card" style="padding:28px;">
+      <div class="field">
+        <label data-i18n="field_jtype">Jewelry type</label>
+        <select id="jewelry-type"></select>
+      </div>
+      <div class="field">
+        <label data-i18n="field_purity">Purity</label>
+        <div class="purity-row" id="purity-row"></div>
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label data-i18n="field_weight">Weight (grams)</label>
+        <input type="number" id="weight-input" min="0" step="0.1" value="12" placeholder="e.g. 8.5" />
+      </div>
+    </div>
+    <div class="card" style="padding:28px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <p class="hero-rate-label" data-i18n="calc_result_label">Estimated value</p>
+        <p class="result-big" id="calc-value"></p>
+        <div class="result-row"><span class="k">Gold content</span><span class="v" id="calc-content"></span></div>
+        <div class="result-row"><span class="k" data-i18n="calc_rate_label">Rate used (24K basis)</span><span class="v" id="calc-rate"></span></div>
+        <div class="result-row"><span class="k" data-i18n="calc_item_label">Item</span><span class="v" id="calc-item"></span></div>
+      </div>
+      <p class="footnote" data-i18n="calc_footnote">Excludes making charges, GST and any deductions a buyer or lender may apply.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOANS ============ -->
+<section id="loans" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_loans">Compare Gold Loans</span></div>
+  <h2 class="h2" data-i18n="h2_loans">Find the best loan against your gold</h2>
+  <p class="sub"></p>
+  <div class="filters">
+    <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+    <div class="grp">
+      <label data-i18n="filter_max_interest">Max interest</label>
+      <input type="range" id="interest-range" min="8" max="11" step="0.1" value="11" style="width:120px;" />
+      <span class="mono" id="interest-val" style="color:var(--gold-bright);font-size:12px;"></span>
+    </div>
+    <div class="chiprow" id="type-chips">
+      <button class="chip active" data-type="All" data-i18n="chip_all">All</button>
+      <button class="chip" data-type="Bank" data-i18n="chip_bank">Bank</button>
+      <button class="chip" data-type="NBFC" data-i18n="chip_nbfc">NBFC</button>
+    </div>
+    <div class="grp" style="margin-left:auto;">
+      <label data-i18n="filter_tenure">Tenure</label>
+      <select id="tenure-select">
+        <option value="6">6 months</option>
+        <option value="12" selected>12 months</option>
+        <option value="18">18 months</option>
+        <option value="24">24 months</option>
+        <option value="36">36 months</option>
+      </select>
+    </div>
+  </div>
+  <div id="loan-list"></div>
+</section>
+
+<!-- ============ JEWELRY ============ -->
+<section id="jewelry" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_jewelry">Compare Jewelry Prices</span></div>
+  <h2 class="h2" id="jewelry-title">Same jewelry, four price tags</h2>
+  <p class="sub" id="jewelry-sub"></p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th data-i18n="th_store">Store</th><th data-i18n="th_making">Making charge</th><th data-i18n="th_gst">GST (3%)</th><th data-i18n="th_final">Final price</th><th data-i18n="th_contact">Contact</th></tr></thead>
+      <tbody id="jewelry-tbody"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ JEWELRY WASTAGE ============ -->
+<section id="wastage" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_wastage">Jewelry Wastage</span></div>
+  <h2 class="h2" data-i18n="h2_wastage">Manufacturing wastage, by store</h2>
+  <p class="sub" data-i18n="wastage_sub">Wastage is set and updated by each verified store, not by Thangam. It varies by design complexity and jeweler — always confirm the exact figure at the counter before you buy.</p>
+  <div class="filters" style="margin-bottom:20px;">
+    <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+    <div class="grp">
+      <label data-i18n="field_jtype">Jewelry type</label>
+      <select id="wastage-type-select"></select>
+    </div>
+    <div class="grp" style="margin-left:auto;">
+      <label data-i18n="field_weight">Weight (grams)</label>
+      <input type="number" id="wastage-weight-input" min="0" step="0.1" value="12" style="width:100px;" />
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th data-i18n="th_store">Store</th>
+        <th data-i18n="th_wastage_pct">Wastage %</th>
+        <th data-i18n="th_wastage_wt">Wastage weight</th>
+        <th data-i18n="th_total_wt">Total gold weight charged</th>
+      </tr></thead>
+      <tbody id="wastage-tbody"></tbody>
+    </table>
+  </div>
+  <p class="footnote" style="margin-top:14px;" data-i18n="wastage_demo_note">Sample figures shown for demonstration. In production, each value here is supplied and kept current by the store itself, never generated by Thangam.</p>
+</section>
+
+<!-- ============ TRUSTED PARTNERS ============ -->
+<section class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_partners">Trusted Partners</span></div>
+  <div class="partners" id="partners"></div>
+</section>
+
+<!-- ============ BUY GOLD ONLINE ============ -->
+<section id="shop" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_shop">Buy Gold Online</span></div>
+  <h2 class="h2" data-i18n="h2_shop">Shop verified jewelry, priced live</h2>
+  <p class="sub" data-i18n="shop_sub"></p>
+  <div class="filters" style="margin-bottom:24px;">
+    <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="shop-search" data-i18n-ph="shop_search_ph" placeholder="Search jewelry (e.g. bangle, 22K, Tanishq)…" style="max-width:260px;" />
+    <div class="chiprow" id="shop-chips">
+      <button class="chip active" data-cat="All" data-i18n="chip_all">All</button>
+    </div>
+    <div class="grp" style="margin-left:auto;">
+      <label data-i18n="shop_sort">Sort</label>
+      <select id="shop-sort">
+        <option value="popular" data-i18n="shop_sort_popular">Popular</option>
+        <option value="low" data-i18n="shop_sort_low">Price: Low to high</option>
+        <option value="high" data-i18n="shop_sort_high">Price: High to low</option>
+      </select>
+    </div>
+  </div>
+  <div class="shop-grid" id="shop-grid"></div>
+  <p class="footnote" style="margin-top:16px;" data-i18n="shop_note">Checkout is a working demo flow (order confirmation, tracking, invoice, returns) — real payments need a licensed payment gateway wired into a live backend.</p>
+</section>
+
+<!-- ============ EMI ============ -->
+<section id="emi" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_emi">EMI &amp; Interest Calculator</span></div>
+  <h2 class="h2" data-i18n="h2_emi">What will your monthly payment look like?</h2>
+  <p class="sub"></p>
+  <div class="emi-grid">
+    <div class="card" style="padding:28px;">
+      <div class="field">
+        <label>Lender</label>
+        <select id="emi-lender"></select>
+      </div>
+      <div class="field">
+        <label>Loan amount (₹)</label>
+        <input type="number" id="emi-amount" value="150000" />
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label id="emi-tenure-label">Tenure: 12 months</label>
+        <input type="range" id="emi-tenure" min="3" max="36" value="12" />
+      </div>
+    </div>
+    <div class="card" style="padding:28px;">
+      <p class="hero-rate-label" data-i18n="emi_monthly_label">Monthly EMI</p>
+      <p class="result-big" id="emi-value"></p>
+      <div class="result-row"><span class="k" data-i18n="emi_interest_label">Total interest payable</span><span class="v" id="emi-interest"></span></div>
+      <div class="result-row"><span class="k" data-i18n="emi_total_label">Total repayment</span><span class="v" id="emi-total"></span></div>
+      <div class="result-row"><span class="k" data-i18n="emi_rate_label">Effective rate</span><span class="v" id="emi-rate"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARDS ============ -->
+<section id="dashboards" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_dash">Dashboards</span></div>
+  <h2 class="h2" data-i18n="h2_dash">One platform, three vantage points</h2>
+  <p class="sub"></p>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="customer" onclick="setDashTab('customer')">
+      <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span data-i18n="tab_customer">Customer</span>
+    </button>
+    <button class="tab-btn" data-tab="business" onclick="setDashTab('business')">
+      <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1M9 13h1M14 9h1M14 13h1"/></svg> <span data-i18n="tab_business">Business</span>
+    </button>
+    <button class="tab-btn" data-tab="admin" onclick="setDashTab('admin')">
+      <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg> <span data-i18n="tab_admin">Admin</span>
+    </button>
+  </div>
+
+  <div class="dash-panel active" id="dash-customer">
+    <div class="dash-grid">
+      <div class="card stat-card"><p class="l">Saved lenders</p><p class="v">3</p></div>
+      <div class="card stat-card"><p class="l">Valuations run</p><p class="v">12</p></div>
+      <div class="card stat-card"><p class="l">Open inquiries</p><p class="v">2</p></div>
+      <div class="card stat-card span3">
+        <p class="l" style="font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">Recent valuation history</p>
+        <div class="hist-row"><span style="color:var(--text3)">Chain · 22K · 15g</span><span class="mono" style="color:var(--gold-bright)">₹98,214</span></div>
+        <div class="hist-row"><span style="color:var(--text3)">Ring · 18K · 4g</span><span class="mono" style="color:var(--gold-bright)">₹21,444</span></div>
+        <div class="hist-row" style="border-bottom:none;"><span style="color:var(--text3)">Bangle · 22K · 22g</span><span class="mono" style="color:var(--gold-bright)">₹1,44,047</span></div>
+      </div>
+      <div class="card stat-card span3">
+        <p class="l" style="font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;" data-i18n="orders_title">My orders</p>
+        <div id="orders-list"></div>
+        <p class="footnote" id="orders-empty" data-i18n="orders_empty" style="display:none;">No orders yet — items you buy in the Shop section will appear here with tracking, invoice and returns.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-panel" id="dash-business">
+    <div class="dash-grid">
+      <div class="card stat-card"><p class="l">Active leads this month</p><p class="v">47</p></div>
+      <div class="card stat-card"><p class="l">Conversion rate</p><p class="v">18%</p></div>
+      <div class="card stat-card"><p class="l">Listing tier</p><p class="v">Featured</p></div>
+      <div class="card stat-card span3">
+        <p class="l" style="font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;">Manage current offer</p>
+        <div class="offer-row">
+          <input type="text" value="9.5" />
+          <input type="text" value="₹5,250 / g accepted" />
+          <button class="btn" data-i18n="btn_update_offer">Update offer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-panel" id="dash-admin">
+    <div id="admin-locked" class="card" style="padding:40px 24px;text-align:center;max-width:380px;margin:0 auto;">
+      <svg class="icon" viewBox="0 0 24 24" style="width:28px;height:28px;color:var(--gold);margin-bottom:14px;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <p class="h2" style="font-size:20px;margin-bottom:8px;" data-i18n="admin_locked_title">Admin access required</p>
+      <p class="sub" style="margin-bottom:20px;" data-i18n="admin_locked_sub">This panel is restricted. Log in with an admin account to manage users, businesses and review moderation.</p>
+      <button class="btn" onclick="openLoginModal('admin')" data-i18n="btn_admin_login">Log in as Admin</button>
+    </div>
+    <div id="admin-unlocked" style="display:none;">
+      <div class="dash-grid admin">
+        <div class="card stat-card"><p class="l">Total users</p><p class="v">8,412</p></div>
+        <div class="card stat-card"><p class="l">Business partners</p><p class="v">36</p></div>
+        <div class="card stat-card"><p class="l">Commission earned</p><p class="v">₹4.2L</p></div>
+        <div class="card stat-card"><p class="l">Active ad slots</p><p class="v">5</p></div>
+        <div class="card stat-card" style="grid-column:1/-1;">
+          <p class="l" style="font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;" data-i18n="review_pending_title">Pending reviews</p>
+          <div id="pending-reviews-list"></div>
+          <p class="footnote" id="pending-reviews-empty" data-i18n="review_no_pending" style="display:none;">No reviews waiting for moderation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_reviews">Customer Reviews</span></div>
+  <div class="rate-flex-head" style="margin-bottom:24px;">
+    <h2 class="h2" style="margin-bottom:0;" data-i18n="h2_reviews">What people found here</h2>
+    <button class="btn btn-outline" onclick="openReviewModal()">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      <span data-i18n="btn_write_review">Write a review</span>
+    </button>
+  </div>
+  <div class="reviews-grid" id="reviews-grid"></div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_faq">FAQ</span></div>
+  <h2 class="h2" data-i18n="h2_faq">Questions, answered plainly</h2>
+  <p class="sub"></p>
+  <div style="max-width:760px;" id="faq-list"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_contact">Contact</span></div>
+  <h2 class="h2" data-i18n="h2_contact">Talk to the Thangam team</h2>
+  <p class="sub"></p>
+  <div class="contact-grid">
+    <div class="card" style="padding:28px;">
+      <div id="contact-form">
+        <div class="field"><input type="text" placeholder="Name" /></div>
+        <div class="field"><input type="text" placeholder="Email or phone" /></div>
+        <div class="field" style="margin-bottom:0;"><textarea rows="4" placeholder="Message"></textarea></div>
+        <button class="btn" style="margin-top:16px;" data-i18n="btn_send_message" onclick="sendContact()">Send message</button>
+      </div>
+      <p id="contact-success" style="display:none;color:var(--gold-bright);" data-i18n="contact_success">Thanks — we'll get back to you shortly.</p>
+    </div>
+    <div>
+      <div class="contact-info">
+        <a href="tel:+919865652122">
+          <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+          +91 98656 52122
+        </a>
+        <a href="mailto:elamkavi4@gmail.com">
+          <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M4 4h16v16H4z"/><polyline points="22 6 12 13 2 6"/></svg>
+          elamkavi4@gmail.com
+        </a>
+        <p><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ariyalur, Tamil Nadu, India</p>
+        <p style="font-size:11px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;margin:18px 0 8px;" data-i18n="pc_partner_role">Partner &amp; Store Manager</p>
+        <a href="tel:+917795236831">
+          <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+          Vignesh · +91 77952 36831
+        </a>
+        <a href="mailto:whovikivignesh@gmail.com">
+          <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M4 4h16v16H4z"/><polyline points="22 6 12 13 2 6"/></svg>
+          whovikivignesh@gmail.com
+        </a>
+      </div>
+      <div class="card whatsnext">
+        <p class="hero-rate-label" style="margin-bottom:10px;">What's next</p>
+        <ul>
+          <li><svg class="icon" viewBox="0 0 24 24" style="width:13px;height:13px;color:var(--gold);margin-top:2px;flex-shrink:0"><path d="M12 3v18M3 12h18"/></svg>AI-based gold price prediction</li>
+          <li><svg class="icon" viewBox="0 0 24 24" style="width:13px;height:13px;color:var(--gold);margin-top:2px;flex-shrink:0"><path d="M12 3v18M3 12h18"/></svg>Photo-based jewelry type recognition</li>
+          <li><svg class="icon" viewBox="0 0 24 24" style="width:13px;height:13px;color:var(--gold);margin-top:2px;flex-shrink:0"><path d="M12 3v18M3 12h18"/></svg>OCR invoice reading &amp; WhatsApp alerts</li>
+          <li><svg class="icon" viewBox="0 0 24 24" style="width:13px;height:13px;color:var(--gold);margin-top:2px;flex-shrink:0"><path d="M12 3v18M3 12h18"/></svg>GPS-based nearby store finder &amp; booking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM CONTACTS ============ -->
+<section id="platform-contacts" class="section">
+  <div class="eyebrow"><span class="bar"></span><span data-i18n="eyebrow_pc">Platform Contacts</span></div>
+  <h2 class="h2" data-i18n="h2_pc">Who's behind Thangam</h2>
+  <p class="sub"></p>
+  <div class="pc-grid">
+    <div class="card pc-card">
+      <div class="pc-head">
+        <span class="badge badge-md"><span>EK</span></span>
+        <div><p class="name">Elamkavi S</p><p class="role" data-i18n="pc_owner_role">Founder &amp; Site Owner</p></div>
+      </div>
+      <div class="contact-info">
+        <a href="tel:+919865652122"><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg>+91 98656 52122</a>
+        <a href="mailto:elamkavi4@gmail.com"><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M4 4h16v16H4z"/><polyline points="22 6 12 13 2 6"/></svg>elamkavi4@gmail.com</a>
+        <p><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ariyalur, Tamil Nadu, India</p>
+        <p><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>Instagram @KaviTof1</p>
+      </div>
+    </div>
+    <div class="card pc-card">
+      <div class="pc-head">
+        <span class="badge badge-md"><span>VK</span></span>
+        <div><p class="name">Vignesh</p><p class="role" data-i18n="pc_partner_role">Partner &amp; Store Manager</p></div>
+      </div>
+      <div class="contact-info">
+        <a href="tel:+917795236831"><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg>+91 77952 36831</a>
+        <a href="mailto:whovikivignesh@gmail.com"><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M4 4h16v16H4z"/><polyline points="22 6 12 13 2 6"/></svg>whovikivignesh@gmail.com</a>
+      </div>
+      <p class="pc-note" data-i18n="pc_partner_note">Onboarding, rate updates, lead management and billing for featured listings and premium subscriptions. Reach out by call or email — a team member will get back to you directly.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="flogo"><span class="badge badge-sm"><span>த</span></span> © <span id="year"></span> Thangam. <span data-i18n="footer_note">Rates are indicative, not transactional.</span></span>
+  <span data-i18n="footer_tags">Referral commissions · Featured listings · Premium subscriptions · Lead generation</span>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart(false)"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head">
+    <h3 class="serif" style="font-size:20px;margin:0;" data-i18n="cart_title">Your cart</h3>
+    <button class="modal-close" style="position:static;" onclick="toggleCart(false)">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot">
+    <div class="result-row" style="border-bottom:none;"><span class="k" data-i18n="cart_total">Total</span><span class="v" id="cart-total" style="font-size:18px;"></span></div>
+    <button class="btn" style="width:100%;margin-top:10px;" onclick="checkout()" data-i18n="btn_checkout">Checkout</button>
+    <p class="modal-fine" data-i18n="cart_fine">Demo checkout — creates a mock order you can track below. No real payment is taken.</p>
+  </div>
+</div>
+
+<!-- ============ LOGIN MODAL ============ -->
+<div class="modal-overlay" id="login-overlay" onclick="if(event.target===this) closeLoginModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeLoginModal()">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="login-form-wrap">
+      <p class="modal-title" data-i18n="login_title">Sign in to Thangam</p>
+      <div class="chiprow" id="login-role-tabs" style="margin-bottom:18px;">
+        <button class="chip active" data-role="customer" onclick="selectLoginRole('customer')" data-i18n="tab_customer">Customer</button>
+        <button class="chip" data-role="business" onclick="selectLoginRole('business')" data-i18n="tab_business">Business</button>
+        <button class="chip" data-role="admin" onclick="selectLoginRole('admin')" data-i18n="tab_admin">Admin</button>
+      </div>
+      <div class="modal-field"><input type="text" id="login-name-input" data-i18n-ph="login_name_ph" placeholder="Your name" /></div>
+      <div class="modal-field" id="login-password-field" style="display:none;">
+        <input type="password" id="login-password-input" data-i18n-ph="login_password_ph" placeholder="Admin password" />
+        <p class="modal-fine" data-i18n="login_admin_hint">Demo credential: password is admin123 — there's no real account system behind this yet.</p>
+      </div>
+      <p id="login-error" style="display:none;color:#B3261E;font-size:12px;margin:-4px 0 12px;" data-i18n="login_error">That admin password isn't right. Try again.</p>
+      <button class="btn" style="width:100%;" onclick="submitLogin()" data-i18n="btn_login">Log in</button>
+      <p class="modal-fine" data-i18n="login_fine">This is a demo login for exploring the dashboards — no password is sent anywhere or stored securely. A production version needs a real backend with hashed passwords and sessions.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REVIEW MODAL ============ -->
+<div class="modal-overlay" id="review-overlay" onclick="if(event.target===this) closeReviewModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeReviewModal()">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="review-form-wrap">
+      <p class="modal-title" data-i18n="review_title">Write a review</p>
+      <div class="modal-field">
+        <label style="display:block;font-size:12px;color:var(--muted);margin-bottom:6px;" data-i18n="review_store">Store</label>
+        <select id="review-store"></select>
+      </div>
+      <div class="modal-field">
+        <label style="display:block;font-size:12px;color:var(--muted);margin-bottom:6px;" data-i18n="review_rating">Your rating</label>
+        <div id="review-stars" style="display:flex;gap:6px;"></div>
+      </div>
+      <div class="modal-field"><input type="text" id="review-name-input" data-i18n-ph="review_name" placeholder="Your name" /></div>
+      <div class="modal-field"><textarea id="review-text-input" rows="3" data-i18n-ph="review_text" placeholder="Your review" style="width:100%;background:var(--field);border:1px solid rgba(23,21,16,.25);border-radius:3px;padding:12px 14px;font-size:14px;color:var(--ivory);"></textarea></div>
+      <div class="modal-field">
+        <label style="display:block;font-size:12px;color:var(--muted);margin-bottom:6px;" data-i18n="review_photo">Add a photo (optional)</label>
+        <input type="file" id="review-photo-input" accept="image/*" style="font-size:12px;color:var(--muted);" />
+        <img id="review-photo-preview" style="display:none;max-height:80px;border-radius:3px;margin-top:8px;border:1px solid var(--line);" />
+      </div>
+      <button class="btn" style="width:100%;margin-top:8px;" onclick="submitReview()" data-i18n="review_submit">Submit review</button>
+    </div>
+    <div class="modal-success" id="review-success">
+      <div class="modal-check"><svg class="icon" viewBox="0 0 24 24" style="color:var(--gold);width:24px;height:24px"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h3 class="modal-name" style="font-size:20px;" data-i18n="review_thanks">Thanks — your review will appear after moderation.</h3>
+      <button class="btn btn-outline" onclick="closeReviewModal()" style="width:100%;margin-top:10px;" data-i18n="btn_close">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this) closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="modal-form-wrap">
+      <p class="modal-title" data-i18n="modal_request">Request a callback</p>
+      <h3 class="modal-name" id="modal-name"></h3>
+      <a class="modal-call" id="modal-call">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+        <span id="modal-phone"></span> · <span data-i18n="modal_call_directly">call directly</span>
+      </a>
+      <div class="modal-field"><input type="text" id="modal-name-input" data-i18n-ph="modal_ph_name" placeholder="Your full name" /></div>
+      <div class="modal-field"><input type="text" id="modal-phone-input" data-i18n-ph="modal_ph_phone" placeholder="Phone number" /></div>
+      <div class="modal-field"><input type="text" id="modal-amount-input" placeholder="Loan amount needed (₹)" /></div>
+      <button class="btn" style="width:100%;margin-top:8px;" onclick="submitModal()"><span data-i18n="btn_send_request">Send request</span>
+        <svg class="icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p class="modal-fine" data-i18n="modal_fine">By submitting, you agree the selected business may contact you regarding this inquiry. Thangam may earn a referral commission if this leads to a completed transaction.</p>
+    </div>
+    <div class="modal-success" id="modal-success">
+      <div class="modal-check">
+        <svg class="icon" viewBox="0 0 24 24" style="color:var(--gold);width:24px;height:24px"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="modal-name" style="font-size:20px;">Request sent</h3>
+      <p style="color:var(--text2);font-size:14px;margin-bottom:20px;" id="modal-success-text"></p>
+      <button class="btn btn-outline" onclick="closeModal()" style="width:100%;" data-i18n="btn_close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================ DATA */
+const PURITY_FACTOR = { "24K": 1, "22K": 0.916, "18K": 0.75 };
+const JEWELRY_TYPES = ["Ring","Chain","Necklace","Bracelet","Earrings","Bangle","Coin","Anklet"];
+/* Today's live per-gram rates, as provided. */
+const RATE_TODAY = { "24K": 15235, "22K": 13965, "18K": 11426 };
+const BASE_RATE_24K = RATE_TODAY["24K"];
+
+function buildHistory(){
+  const days = 30, out = [];
+  const today = new Date();
+  for(let i=days-1;i>=0;i--){
+    const d = new Date(today); d.setDate(d.getDate()-i);
+    const wave = Math.sin(i/4.2)*42 + Math.cos(i/9)*21;
+    const drift = (days-i)*1.6;
+    const rate24 = Math.round(BASE_RATE_24K - 180 + wave + drift);
+    out.push({ date: d.toLocaleDateString('en-IN',{day:'2-digit',month:'short'}), rate24, rate22: Math.round(rate24*PURITY_FACTOR["22K"]) });
+  }
+  return out;
+}
+const HISTORY = buildHistory();
+const TODAY = HISTORY[HISTORY.length-1];
+const YESTERDAY = HISTORY[HISTORY.length-2];
+/* Pin today's card/ticker/calculator figures to the exact live rates given. */
+TODAY.rate24 = RATE_TODAY["24K"];
+TODAY.rate22 = RATE_TODAY["22K"];
+TODAY.rate18 = RATE_TODAY["18K"];
+YESTERDAY.rate24 = RATE_TODAY["24K"] - 95;
+YESTERDAY.rate22 = Math.round(YESTERDAY.rate24 * PURITY_FACTOR["22K"]);
+
+const LOAN_PROVIDERS = [
+  { id:"muthoot", name:"Muthoot Finance", type:"NBFC", ratePerGram:11200, minAmt:3000, maxAmt:2500000, interest:9.5, processingFee:0.5, tenure:"3–24 months", rating:4.4, phone:"+91 98765 43210" },
+  { id:"manappuram", name:"Manappuram Finance", type:"NBFC", ratePerGram:11050, minAmt:1500, maxAmt:2000000, interest:10.2, processingFee:0.4, tenure:"3–36 months", rating:4.3, phone:"+91 98765 43211" },
+  { id:"iifl", name:"IIFL Finance", type:"NBFC", ratePerGram:11300, minAmt:5000, maxAmt:3000000, interest:9.9, processingFee:1.0, tenure:"6–24 months", rating:4.2, phone:"+91 98765 43212" },
+  { id:"sbi", name:"State Bank of India", type:"Bank", ratePerGram:11520, minAmt:20000, maxAmt:5000000, interest:8.7, processingFee:0.25, tenure:"6–36 months", rating:4.5, phone:"+91 98765 43213" },
+  { id:"hdfc", name:"HDFC Bank", type:"Bank", ratePerGram:11480, minAmt:25000, maxAmt:4000000, interest:8.9, processingFee:0.3, tenure:"6–24 months", rating:4.4, phone:"+91 98765 43214" },
+  { id:"federal", name:"Federal Bank", type:"Bank", ratePerGram:11350, minAmt:10000, maxAmt:2500000, interest:9.1, processingFee:0.35, tenure:"6–30 months", rating:4.1, phone:"+91 98765 43215" },
+];
+const JEWELRY_STORES = [
+  { id:"tanishq", name:"Tanishq", city:"Trichy", makingPct:14, rating:4.6, speciality:"Bridal & temple collections", phone:"+91 98765 11001" },
+  { id:"joyalukkas", name:"Joyalukkas", city:"Chennai", makingPct:11, rating:4.5, speciality:"Wide daily-wear range", phone:"+91 98765 11002" },
+  { id:"kalyan", name:"Kalyan Jewellers", city:"Coimbatore", makingPct:12, rating:4.5, speciality:"Regional design variety", phone:"+91 98765 11003" },
+  { id:"malabar", name:"Malabar Gold & Diamonds", city:"Madurai", makingPct:10, rating:4.4, speciality:"Value pricing, buy-back", phone:"+91 98765 11004" },
+];
+const WASTAGE_TYPES = ["Ring","Chain","Necklace","Earrings","Bracelet","Bangle","Coin"];
+/* Demo figures only — in production each store submits and maintains its own wastage % via the Business dashboard. Never fabricate these for real use. */
+const STORE_WASTAGE = {
+  tanishq:    { Ring:6.5, Chain:8.0, Necklace:9.5, Earrings:5.5, Bracelet:7.0, Bangle:7.5, Coin:1.0 },
+  joyalukkas: { Ring:5.0, Chain:6.5, Necklace:8.0, Earrings:4.5, Bracelet:6.0, Bangle:6.5, Coin:0.5 },
+  kalyan:     { Ring:5.5, Chain:7.0, Necklace:8.5, Earrings:5.0, Bracelet:6.5, Bangle:7.0, Coin:1.0 },
+  malabar:    { Ring:4.5, Chain:6.0, Necklace:7.5, Earrings:4.0, Bracelet:5.5, Bangle:6.0, Coin:0.5 },
+};
+const PRODUCTS = [
+  { id:"p1", name:"Classic Gold Band", type:"Ring", storeId:"tanishq", purity:"22K", weight:4.2, popularity:9 },
+  { id:"p2", name:"Temple Motif Chain", type:"Chain", storeId:"tanishq", purity:"22K", weight:18.5, popularity:8 },
+  { id:"p3", name:"Bridal Necklace Set", type:"Necklace", storeId:"kalyan", purity:"22K", weight:32.0, popularity:10 },
+  { id:"p4", name:"Everyday Hoop Earrings", type:"Earrings", storeId:"joyalukkas", purity:"18K", weight:3.1, popularity:7 },
+  { id:"p5", name:"Kada Bracelet", type:"Bracelet", storeId:"malabar", purity:"22K", weight:11.4, popularity:6 },
+  { id:"p6", name:"Traditional Bangle Pair", type:"Bangle", storeId:"joyalukkas", purity:"22K", weight:22.8, popularity:9 },
+  { id:"p7", name:"999 Gold Coin", type:"Coin", storeId:"tanishq", purity:"24K", weight:8.0, popularity:8 },
+  { id:"p8", name:"Minimal Stud Earrings", type:"Earrings", storeId:"malabar", purity:"18K", weight:1.8, popularity:5 },
+];
+function productPrice(p){
+  const store = JEWELRY_STORES.find(s=>s.id===p.storeId);
+  const goldValue = p.weight*RATE_TODAY[p.purity];
+  const making = goldValue*(store.makingPct/100);
+  return (goldValue+making)*1.03;
+}
+const REVIEWS = [
+  { name:"Priya R.", role:"Sold gold jewelry", text:"Compared three lenders in five minutes and picked one with a much lower processing fee than my bank branch quoted.", rating:5 },
+  { name:"Arun K.", role:"Bought a chain", text:"Seeing making charges side by side before I walked into the store saved real negotiation time.", rating:5 },
+  { name:"Meena S.", role:"Took a gold loan", text:"The EMI calculator matched what Muthoot quoted almost exactly. Good starting point before visiting a branch.", rating:4 },
+];
+const FAQS = [
+  { q:"How is my gold's estimated value calculated?", a:"We multiply your entered weight by the purity factor for your karat (24K, 22K or 18K) and the live per-gram rate, giving you the underlying gold content value before any making charges or deductions." },
+  { q:"Is the live gold rate exact for my city?", a:"Rates shown are indicative benchmark rates. Local jewellers and lenders may vary by a small margin depending on city, GST treatment and their own margins." },
+  { q:"Do I need to visit a branch to compare loans?", a:"No. Compare rates, tenure and fees here first, then request a callback from the provider you prefer. A representative will reach out to arrange verification and disbursal." },
+  { q:"Does Thangam charge me anything?", a:"Thangam is free for individual users. We're paid a referral commission by partner lenders and jewellers only when a successful connection is made." },
+  { q:"How accurate is the jewelry purchase comparison?", a:"Final price includes today's live rate, the store's stated making charge percentage and 3% GST — the same components used on an actual store invoice." },
+];
+const SEARCH_INDEX = [
+  { label:"Gold rate today (22K & 24K)", section:"rate" },
+  { label:"Gold weight & purity calculator", section:"calculator" },
+  { label:"Compare gold loan interest rates", section:"loans" },
+  { label:"Muthoot Finance gold loan", section:"loans" },
+  { label:"Manappuram Finance gold loan", section:"loans" },
+  { label:"SBI gold loan interest rate", section:"loans" },
+  { label:"Tanishq making charges", section:"jewelry" },
+  { label:"Joyalukkas jewelry price", section:"jewelry" },
+  { label:"Kalyan Jewellers", section:"jewelry" },
+  { label:"Malabar Gold & Diamonds", section:"jewelry" },
+  { label:"EMI calculator for gold loan", section:"emi" },
+  { label:"Ring purity 22K value", section:"calculator" },
+  { label:"Necklace weight calculator", section:"calculator" },
+  { label:"Nearby jewelry stores", section:"jewelry" },
+  { label:"Frequently asked questions", section:"faq" },
+];
+const fmtINR = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n);
+
+/* ============================================================ I18N */
+const TRANSLATIONS = {
+  en: {
+    nav_rate:"Gold Rate", nav_calc:"Calculator", nav_loans:"Loans", nav_jewelry:"Jewelry", nav_dash:"Dashboards", nav_faq:"FAQ", nav_contact:"Contact", nav_contacts:"Contacts",
+    search_ph:"Search rates, lenders, jewelry, FAQs…", sign_in:"Sign in",
+    hero_h1_pre:"Thangam — know what your gold is", hero_h1_em:"really", hero_h1_post:"worth.",
+    hero_p:"Estimate jewelry value by weight and purity, compare gold loan offers side by side, and connect directly with retailers and lenders we've vetted — all before you walk into a branch.",
+    hero_btn_value:"Value my gold", hero_btn_loans:"Compare loans",
+    hero_hl1:"Verified partners", hero_hl2:"Rates updated hourly", hero_card_label:"Today's benchmark rate",
+    eyebrow_rate:"Live Gold Rate", h2_rate:"Today's gold rate",
+    eyebrow_calc:"Gold Weight & Purity Calculator", h2_calc:"Estimate what your piece is worth",
+    eyebrow_loans:"Compare Gold Loans", h2_loans:"Find the best loan against your gold",
+    eyebrow_jewelry:"Compare Jewelry Prices",
+    eyebrow_partners:"Trusted Partners",
+    eyebrow_emi:"EMI & Interest Calculator", h2_emi:"What will your monthly payment look like?",
+    eyebrow_dash:"Dashboards", h2_dash:"One platform, three vantage points",
+    tab_customer:"Customer", tab_business:"Business", tab_admin:"Admin",
+    eyebrow_reviews:"Customer Reviews", h2_reviews:"What people found here",
+    eyebrow_faq:"FAQ", h2_faq:"Questions, answered plainly",
+    eyebrow_contact:"Contact", h2_contact:"Talk to the Thangam team",
+    eyebrow_pc:"Platform Contacts", h2_pc:"Who's behind Thangam",
+    field_jtype:"Jewelry type", field_purity:"Purity", field_weight:"Weight (grams)",
+    filter_max_interest:"Max interest", filter_tenure:"Tenure", chip_all:"All", chip_bank:"Bank", chip_nbfc:"NBFC",
+    btn_contact:"Contact", btn_send_message:"Send message", btn_send_request:"Send request", btn_close:"Close", btn_update_offer:"Update offer",
+    footer_note:"Rates are indicative, not transactional.", footer_tags:"Referral commissions · Featured listings · Premium subscriptions · Lead generation",
+    loc_prompt:"Show nearby verified stores by sharing your location.", loc_use_button:"Use my location", loc_change:"Change manually", loc_manual_ph:"Enter your city",
+    loc_detecting:"Detecting your location…", loc_denied:"Location permission denied — you can enter your city manually instead.", loc_unsupported:"Location isn't supported in this browser.",
+    th_store:"Store", th_making:"Making charge", th_gst:"GST (3%)", th_final:"Final price", th_contact:"Contact",
+    modal_request:"Request a callback", modal_call_directly:"call directly", modal_ph_name:"Your full name", modal_ph_phone:"Phone number",
+    modal_fine:"By submitting, you agree the selected business may contact you regarding this inquiry. Thangam may earn a referral commission if this leads to a completed transaction.",
+    contact_success:"Thanks — we'll get back to you shortly.",
+    pc_owner_role:"Founder & Site Owner", pc_partner_role:"Partner & Store Manager",
+    pc_partner_note:"Onboarding, rate updates, lead management and billing for featured listings and premium subscriptions. Reach out by call or email — a team member will get back to you directly.",
+    rate_updated:"Updated hourly · last refresh 09:00 IST",
+    calc_result_label:"Estimated value", calc_content_label:"Gold content", calc_rate_label:"Rate used", calc_item_label:"Item",
+    calc_footnote:"Excludes making charges, GST and any deductions a buyer or lender may apply.",
+    emi_monthly_label:"Monthly EMI", emi_interest_label:"Total interest payable", emi_total_label:"Total repayment", emi_rate_label:"Effective rate",
+    per_gram:"per gram", today_word:"today",
+    l_rate_accepted:"Rate accepted", l_est_loan:"Est. loan (for", l_processing_fee:"Processing fee", l_tenure_options:"Tenure options", l_est_repay:"Est. repayment (", l_direct_line:"Direct line:",
+    jewelry_title:"Same {type}, four price tags", jewelry_sub:"Based on {w}g at {p} — using the calculator's current weight and purity above.",
+    no_lenders:"No lenders match these filters right now — try raising the max interest.",
+    nav_wastage:"Wastage", nav_shop:"Shop",
+    eyebrow_wastage:"Jewelry Wastage", h2_wastage:"Manufacturing wastage, by store",
+    wastage_sub:"Wastage is set and updated by each verified store, not by Thangam. It varies by design complexity and jeweler — always confirm the exact figure at the counter before you buy.",
+    wastage_demo_note:"Sample figures shown for demonstration. In production, each value here is supplied and kept current by the store itself, never generated by Thangam.",
+    th_wastage_pct:"Wastage %", th_wastage_wt:"Wastage weight", th_total_wt:"Total gold weight charged",
+    eyebrow_shop:"Buy Gold Online", h2_shop:"Shop verified jewelry, priced live",
+    shop_sub:"Search, compare and buy from verified stores — with live tracking, invoices and returns.",
+    shop_search_ph:"Search jewelry (e.g. bangle, 22K, Tanishq)…",
+    shop_sort:"Sort", shop_sort_popular:"Popular", shop_sort_low:"Price: Low to high", shop_sort_high:"Price: High to low",
+    shop_note:"Checkout is a working demo flow (order confirmation, tracking, invoice, returns) — real payments need a licensed payment gateway wired into a live backend.",
+    shop_empty:"No products match your search — try a different type or keyword.",
+    btn_add_cart:"Add to cart", btn_buy_now:"Buy now", btn_remove:"Remove",
+    cart_title:"Your cart", cart_total:"Total", btn_checkout:"Checkout",
+    cart_fine:"Demo checkout — creates a mock order you can track below. No real payment is taken.",
+    cart_empty:"Your cart is empty.",
+    orders_title:"My orders", orders_empty:"No orders yet — items you buy in the Shop section will appear here with tracking, invoice and returns.",
+    status_processing:"Processing", status_shipped:"Shipped", status_delivered:"Delivered", status_return:"Return requested",
+    btn_invoice:"Download invoice", btn_return:"Request return",
+    checkout_success:"Order {id} placed. Track it any time from your Customer dashboard.",
+    return_prompt:"Tell us briefly why you're returning this order:",
+    return_submitted:"Return request submitted. Our team will reach out to arrange pickup.",
+    search_recent:"Recent searches", search_trending:"Trending searches",
+    welcome_msg:"Your smart gold companion. Compare prices, calculate jewelry value, find trusted stores, and make informed gold decisions with confidence.", welcome_loading:"Loading your gold companion…", welcome_enter:"Enter Thangam",
+    review_title:"Write a review", review_store:"Store", review_rating:"Your rating", review_name:"Your name", review_text:"Your review", review_photo:"Add a photo (optional)", review_submit:"Submit review", review_thanks:"Thanks — your review will appear after moderation.", review_pending_title:"Pending reviews", review_no_pending:"No reviews waiting for moderation.", btn_approve:"Approve", btn_reject:"Reject", btn_write_review:"Write a review",
+  },
+  hi: {
+    nav_rate:"सोने की दर", nav_calc:"कैलकुलेटर", nav_loans:"ऋण", nav_jewelry:"आभूषण", nav_dash:"डैशबोर्ड", nav_faq:"सामान्य प्रश्न", nav_contact:"संपर्क करें", nav_contacts:"संपर्क",
+    search_ph:"दरें, ऋणदाता, आभूषण, प्रश्न खोजें…", sign_in:"साइन इन करें",
+    hero_h1_pre:"தங்கம் — जानिए आपका सोना", hero_h1_em:"वास्तव में", hero_h1_post:"कितना मूल्यवान है।",
+    hero_p:"वज़न और शुद्धता के आधार पर आभूषण का मूल्य आँकें, सोने के ऋण की पेशकशें साथ-साथ तुलना करें, और शाखा जाने से पहले ही सत्यापित विक्रेताओं व ऋणदाताओं से सीधे जुड़ें।",
+    hero_btn_value:"मेरे सोने का मूल्य जानें", hero_btn_loans:"ऋण तुलना करें",
+    hero_hl1:"सत्यापित साझेदार", hero_hl2:"दरें हर घंटे अपडेट होती हैं", hero_card_label:"आज की बेंचमार्क दर",
+    eyebrow_rate:"लाइव सोने की दर", h2_rate:"आज की सोने की दर",
+    eyebrow_calc:"सोने का वज़न व शुद्धता कैलकुलेटर", h2_calc:"अपने आभूषण का मूल्य आँकें",
+    eyebrow_loans:"सोने के ऋण की तुलना करें", h2_loans:"अपने सोने पर सबसे अच्छा ऋण खोजें",
+    eyebrow_jewelry:"आभूषण मूल्य तुलना",
+    eyebrow_partners:"विश्वसनीय साझेदार",
+    eyebrow_emi:"ईएमआई व ब्याज कैलकुलेटर", h2_emi:"आपकी मासिक किस्त कितनी होगी?",
+    eyebrow_dash:"डैशबोर्ड", h2_dash:"एक मंच, तीन दृष्टिकोण",
+    tab_customer:"ग्राहक", tab_business:"व्यवसाय", tab_admin:"एडमिन",
+    eyebrow_reviews:"ग्राहक समीक्षाएं", h2_reviews:"लोगों ने यहाँ क्या पाया",
+    eyebrow_faq:"सामान्य प्रश्न", h2_faq:"सीधे-सरल जवाब",
+    eyebrow_contact:"संपर्क करें", h2_contact:"Thangam टीम से बात करें",
+    eyebrow_pc:"प्लेटफ़ॉर्म संपर्क", h2_pc:"Thangam के पीछे कौन है",
+    field_jtype:"आभूषण प्रकार", field_purity:"शुद्धता", field_weight:"वज़न (ग्राम)",
+    filter_max_interest:"अधिकतम ब्याज", filter_tenure:"अवधि", chip_all:"सभी", chip_bank:"बैंक", chip_nbfc:"एनबीएफसी",
+    btn_contact:"संपर्क करें", btn_send_message:"संदेश भेजें", btn_send_request:"अनुरोध भेजें", btn_close:"बंद करें", btn_update_offer:"ऑफ़र अपडेट करें",
+    footer_note:"दरें सांकेतिक हैं, लेन-देन योग्य नहीं।", footer_tags:"रेफ़रल कमीशन · फ़ीचर्ड लिस्टिंग · प्रीमियम सदस्यता · लीड जनरेशन",
+    loc_prompt:"अपना स्थान साझा कर नज़दीकी सत्यापित स्टोर देखें।", loc_use_button:"मेरा स्थान उपयोग करें", loc_change:"मैन्युअल रूप से बदलें", loc_manual_ph:"अपना शहर लिखें",
+    loc_detecting:"आपका स्थान पता लगाया जा रहा है…", loc_denied:"स्थान अनुमति अस्वीकृत — कृपया शहर मैन्युअल रूप से दर्ज करें।", loc_unsupported:"इस ब्राउज़र में स्थान सुविधा उपलब्ध नहीं है।",
+    th_store:"स्टोर", th_making:"मेकिंग चार्ज", th_gst:"जीएसटी (3%)", th_final:"अंतिम मूल्य", th_contact:"संपर्क",
+    modal_request:"कॉलबैक का अनुरोध करें", modal_call_directly:"सीधे कॉल करें", modal_ph_name:"आपका पूरा नाम", modal_ph_phone:"फ़ोन नंबर",
+    modal_fine:"सबमिट करके, आप सहमत होते हैं कि चयनित व्यवसाय इस पूछताछ के संबंध में आपसे संपर्क कर सकता है। सफल संपर्क होने पर Thangam को रेफ़रल कमीशन मिल सकता है।",
+    contact_success:"धन्यवाद — हम जल्द ही आपसे संपर्क करेंगे।",
+    pc_owner_role:"संस्थापक व साइट स्वामी", pc_partner_role:"पार्टनर व स्टोर मैनेजर",
+    pc_partner_note:"ऑनबोर्डिंग, दर अपडेट, लीड प्रबंधन और फ़ीचर्ड लिस्टिंग व प्रीमियम सदस्यता के लिए बिलिंग। कॉल या ईमेल करें — टीम सदस्य सीधे संपर्क करेगा।",
+    rate_updated:"हर घंटे अपडेट · अंतिम रिफ्रेश 09:00 IST",
+    calc_result_label:"अनुमानित मूल्य", calc_content_label:"सोने की मात्रा", calc_rate_label:"उपयोग की गई दर", calc_item_label:"वस्तु",
+    calc_footnote:"मेकिंग चार्ज, जीएसटी और खरीदार/ऋणदाता की किसी भी कटौती को शामिल नहीं करता।",
+    emi_monthly_label:"मासिक ईएमआई", emi_interest_label:"कुल देय ब्याज", emi_total_label:"कुल पुनर्भुगतान", emi_rate_label:"प्रभावी दर",
+    per_gram:"प्रति ग्राम", today_word:"आज",
+    l_rate_accepted:"स्वीकृत दर", l_est_loan:"अनुमानित ऋण (", l_processing_fee:"प्रोसेसिंग शुल्क", l_tenure_options:"अवधि विकल्प", l_est_repay:"अनुमानित चुकौती (", l_direct_line:"सीधा नंबर:",
+    jewelry_title:"एक जैसा {type}, चार अलग मूल्य", jewelry_sub:"{w}ग्राम, {p} शुद्धता पर आधारित — ऊपर कैलकुलेटर के मौजूदा वज़न और शुद्धता का उपयोग करते हुए।",
+    no_lenders:"इन फ़िल्टरों से कोई ऋणदाता मेल नहीं खाता — अधिकतम ब्याज बढ़ाकर देखें।",
+    nav_wastage:"वेस्टेज", nav_shop:"खरीदें",
+    eyebrow_wastage:"आभूषण वेस्टेज", h2_wastage:"स्टोर के अनुसार निर्माण वेस्टेज",
+    wastage_sub:"वेस्टेज प्रत्येक सत्यापित स्टोर द्वारा तय व अपडेट किया जाता है, Thangam द्वारा नहीं। यह डिज़ाइन जटिलता व जौहरी के अनुसार बदलता है — खरीदने से पहले काउंटर पर सटीक आंकड़ा अवश्य पुष्टि करें।",
+    wastage_demo_note:"प्रदर्शन हेतु नमूना आंकड़े दिखाए गए हैं। उत्पादन में, यहाँ हर मूल्य स्टोर द्वारा स्वयं प्रस्तुत व अद्यतन किया जाता है, Thangam द्वारा नहीं बनाया जाता।",
+    th_wastage_pct:"वेस्टेज %", th_wastage_wt:"वेस्टेज वज़न", th_total_wt:"कुल प्रभारित सोने का वज़न",
+    eyebrow_shop:"ऑनलाइन सोना खरीदें", h2_shop:"सत्यापित आभूषण खरीदें, लाइव कीमत पर",
+    shop_sub:"सत्यापित स्टोरों से खोजें, तुलना करें और खरीदें — लाइव ट्रैकिंग, इनवॉइस व रिटर्न के साथ।",
+    shop_search_ph:"आभूषण खोजें (जैसे बंगल, 22K, Tanishq)…",
+    shop_sort:"क्रम", shop_sort_popular:"लोकप्रिय", shop_sort_low:"कीमत: कम से अधिक", shop_sort_high:"कीमत: अधिक से कम",
+    shop_note:"चेकआउट एक कार्यशील डेमो प्रवाह है (ऑर्डर पुष्टि, ट्रैकिंग, इनवॉइस, रिटर्न) — असली भुगतान के लिए लाइव बैकएंड में लाइसेंसशुदा पेमेंट गेटवे चाहिए।",
+    shop_empty:"आपकी खोज से कोई उत्पाद मेल नहीं खाता — अलग प्रकार या शब्द आज़माएँ।",
+    btn_add_cart:"कार्ट में डालें", btn_buy_now:"अभी खरीदें", btn_remove:"हटाएं",
+    cart_title:"आपका कार्ट", cart_total:"कुल", btn_checkout:"चेकआउट",
+    cart_fine:"डेमो चेकआउट — एक मॉक ऑर्डर बनाता है जिसे आप नीचे ट्रैक कर सकते हैं। कोई असली भुगतान नहीं लिया जाता।",
+    cart_empty:"आपका कार्ट खाली है।",
+    orders_title:"मेरे ऑर्डर", orders_empty:"अभी तक कोई ऑर्डर नहीं — शॉप सेक्शन से खरीदी गई वस्तुएं यहाँ ट्रैकिंग, इनवॉइस व रिटर्न के साथ दिखेंगी।",
+    status_processing:"प्रोसेसिंग", status_shipped:"भेजा गया", status_delivered:"डिलीवर हो गया", status_return:"रिटर्न अनुरोधित",
+    btn_invoice:"इनवॉइस डाउनलोड करें", btn_return:"रिटर्न का अनुरोध करें",
+    checkout_success:"ऑर्डर {id} दर्ज हुआ। इसे कभी भी अपने Customer डैशबोर्ड से ट्रैक करें।",
+    return_prompt:"कृपया संक्षेप में बताएं कि आप यह ऑर्डर क्यों लौटा रहे हैं:",
+    return_submitted:"रिटर्न अनुरोध सबमिट हुआ। हमारी टीम पिकअप के लिए संपर्क करेगी।",
+    search_recent:"हाल की खोजें", search_trending:"ट्रेंडिंग खोजें",
+    welcome_msg:"आपका स्मार्ट गोल्ड साथी। कीमतों की तुलना करें, आभूषण का मूल्य आँकें, विश्वसनीय स्टोर खोजें, और आत्मविश्वास के साथ सही सोने के निर्णय लें।", welcome_loading:"आपका गोल्ड साथी लोड हो रहा है…", welcome_enter:"Thangam में प्रवेश करें",
+    review_title:"समीक्षा लिखें", review_store:"स्टोर", review_rating:"आपकी रेटिंग", review_name:"आपका नाम", review_text:"आपकी समीक्षा", review_photo:"फ़ोटो जोड़ें (वैकल्पिक)", review_submit:"समीक्षा सबमिट करें", review_thanks:"धन्यवाद — मॉडरेशन के बाद आपकी समीक्षा दिखाई देगी।", review_pending_title:"लंबित समीक्षाएं", review_no_pending:"मॉडरेशन के लिए कोई समीक्षा प्रतीक्षारत नहीं है।", btn_approve:"स्वीकृत करें", btn_reject:"अस्वीकार करें", btn_write_review:"समीक्षा लिखें",
+  },
+  ta: {
+    nav_rate:"தங்க விலை", nav_calc:"கால்குலேட்டர்", nav_loans:"கடன்கள்", nav_jewelry:"நகைகள்", nav_dash:"டாஷ்போர்டுகள்", nav_faq:"கேள்விகள்", nav_contact:"தொடர்பு", nav_contacts:"தொடர்புகள்",
+    search_ph:"விலைகள், கடன் நிறுவனங்கள், நகைகள், கேள்விகளைத் தேடுங்கள்…", sign_in:"உள்நுழைக",
+    hero_h1_pre:"தங்கம் — உங்கள் தங்கத்தின் மதிப்பை", hero_h1_em:"உண்மையாக", hero_h1_post:"அறிந்துகொள்ளுங்கள்.",
+    hero_p:"எடை மற்றும் தூய்மையின் அடிப்படையில் நகை மதிப்பை மதிப்பிடுங்கள், தங்கக் கடன் சலுகைகளை ஒப்பிடுங்கள், கிளைக்குச் செல்வதற்கு முன்பே சரிபார்க்கப்பட்ட விற்பனையாளர்கள் மற்றும் கடன் நிறுவனங்களுடன் நேரடியாக இணையுங்கள்.",
+    hero_btn_value:"என் தங்கத்தின் மதிப்பைப் பார்", hero_btn_loans:"கடன்களை ஒப்பிடு",
+    hero_hl1:"சரிபார்க்கப்பட்ட கூட்டாளர்கள்", hero_hl2:"விலைகள் ஒவ்வொரு மணி நேரமும் புதுப்பிக்கப்படும்", hero_card_label:"இன்றைய அடிப்படை விலை",
+    eyebrow_rate:"நேரடி தங்க விலை", h2_rate:"இன்றைய தங்க விலை",
+    eyebrow_calc:"தங்க எடை & தூய்மை கால்குலேட்டர்", h2_calc:"உங்கள் நகையின் மதிப்பை மதிப்பிடுங்கள்",
+    eyebrow_loans:"தங்கக் கடன்களை ஒப்பிடுங்கள்", h2_loans:"உங்கள் தங்கத்திற்கான சிறந்த கடனைக் கண்டறியுங்கள்",
+    eyebrow_jewelry:"நகை விலை ஒப்பீடு",
+    eyebrow_partners:"நம்பகமான கூட்டாளர்கள்",
+    eyebrow_emi:"EMI & வட்டி கால்குலேட்டர்", h2_emi:"உங்கள் மாதாந்திர தொகை எவ்வளவு இருக்கும்?",
+    eyebrow_dash:"டாஷ்போர்டுகள்", h2_dash:"ஒரு தளம், மூன்று பார்வைகள்",
+    tab_customer:"வாடிக்கையாளர்", tab_business:"வணிகம்", tab_admin:"நிர்வாகி",
+    eyebrow_reviews:"வாடிக்கையாளர் விமர்சனங்கள்", h2_reviews:"இங்கு மக்கள் கண்டறிந்தது",
+    eyebrow_faq:"கேள்விகள்", h2_faq:"தெளிவான பதில்கள்",
+    eyebrow_contact:"தொடர்பு", h2_contact:"Thangam குழுவுடன் பேசுங்கள்",
+    eyebrow_pc:"தள தொடர்புகள்", h2_pc:"Thangam-க்குப் பின்னால் யார்",
+    field_jtype:"நகை வகை", field_purity:"தூய்மை", field_weight:"எடை (கிராம்)",
+    filter_max_interest:"அதிகபட்ச வட்டி", filter_tenure:"காலம்", chip_all:"அனைத்தும்", chip_bank:"வங்கி", chip_nbfc:"NBFC",
+    btn_contact:"தொடர்பு", btn_send_message:"செய்தி அனுப்பு", btn_send_request:"கோரிக்கை அனுப்பு", btn_close:"மூடு", btn_update_offer:"சலுகையை புதுப்பி",
+    footer_note:"விலைகள் குறிப்பிடத்தக்கவை, பரிவர்த்தனைக்குரியவை அல்ல.", footer_tags:"பரிந்துரை கமிஷன் · சிறப்பு பட்டியல் · பிரீமியம் சந்தா · லீட் உருவாக்கம்",
+    loc_prompt:"உங்கள் இருப்பிடத்தைப் பகிர்ந்து அருகிலுள்ள சரிபார்க்கப்பட்ட கடைகளைக் காணுங்கள்.", loc_use_button:"என் இருப்பிடத்தைப் பயன்படுத்து", loc_change:"கைமுறையாக மாற்று", loc_manual_ph:"உங்கள் நகரத்தை உள்ளிடவும்",
+    loc_detecting:"உங்கள் இருப்பிடம் கண்டறியப்படுகிறது…", loc_denied:"இருப்பிட அனுமதி மறுக்கப்பட்டது — நகரத்தை கைமுறையாக உள்ளிடவும்.", loc_unsupported:"இந்த உலாவியில் இருப்பிடம் ஆதரிக்கப்படவில்லை.",
+    th_store:"கடை", th_making:"செய்கூலி", th_gst:"ஜிஎஸ்டி (3%)", th_final:"இறுதி விலை", th_contact:"தொடர்பு",
+    modal_request:"அழைப்பு கோருங்கள்", modal_call_directly:"நேரடியாக அழைக்கவும்", modal_ph_name:"உங்கள் முழுப் பெயர்", modal_ph_phone:"தொலைபேசி எண்",
+    modal_fine:"சமர்ப்பிப்பதன் மூலம், தேர்ந்தெடுக்கப்பட்ட வணிகம் இந்த விசாரணை தொடர்பாக உங்களைத் தொடர்பு கொள்ளலாம் என ஒப்புக்கொள்கிறீர்கள். இது வெற்றிகரமாக முடிந்தால் Thangam-க்கு பரிந்துரை கமிஷன் கிடைக்கலாம்.",
+    contact_success:"நன்றி — நாங்கள் விரைவில் உங்களைத் தொடர்பு கொள்வோம்.",
+    pc_owner_role:"நிறுவனர் & தள உரிமையாளர்", pc_partner_role:"கூட்டாளர் & கடை மேலாளர்",
+    pc_partner_note:"இணைவு, விலை புதுப்பிப்பு, லீட் மேலாண்மை மற்றும் சிறப்பு பட்டியல்/பிரீமியம் சந்தாவிற்கான பில்லிங். அழைக்கவும் அல்லது மின்னஞ்சல் அனுப்பவும் — குழு உறுப்பினர் நேரடியாக தொடர்பு கொள்வார்.",
+    rate_updated:"ஒவ்வொரு மணி நேரமும் புதுப்பிப்பு · கடைசி புதுப்பிப்பு 09:00 IST",
+    calc_result_label:"மதிப்பிடப்பட்ட மதிப்பு", calc_content_label:"தங்க உள்ளடக்கம்", calc_rate_label:"பயன்படுத்தப்பட்ட விலை", calc_item_label:"பொருள்",
+    calc_footnote:"செய்கூலி, ஜிஎஸ்டி மற்றும் வாங்குபவர்/கடன் நிறுவனம் விதிக்கும் எந்த கழிவுகளையும் இதில் சேர்க்கவில்லை.",
+    emi_monthly_label:"மாதாந்திர EMI", emi_interest_label:"மொத்த வட்டி செலுத்த வேண்டியது", emi_total_label:"மொத்த திருப்பிச் செலுத்துதல்", emi_rate_label:"பயனுள்ள வட்டி விகிதம்",
+    per_gram:"ஒரு கிராமுக்கு", today_word:"இன்று",
+    l_rate_accepted:"ஏற்கப்படும் விலை", l_est_loan:"மதிப்பிடப்பட்ட கடன் (", l_processing_fee:"செயலாக்க கட்டணம்", l_tenure_options:"கால விருப்பங்கள்", l_est_repay:"மதிப்பிடப்பட்ட திருப்பிச் செலுத்துதல் (", l_direct_line:"நேரடி எண்:",
+    jewelry_title:"ஒரே {type}, நான்கு விலை", jewelry_sub:"{w}கிராம், {p} தூய்மையின் அடிப்படையில் — மேலே உள்ள கால்குலேட்டரின் தற்போதைய எடை மற்றும் தூய்மையைப் பயன்படுத்தி.",
+    no_lenders:"இந்த வடிகட்டல்களுடன் எந்த கடன் நிறுவனமும் பொருந்தவில்லை — அதிகபட்ச வட்டியை உயர்த்தி முயற்சிக்கவும்.",
+    nav_wastage:"வேஸ்டேஜ்", nav_shop:"கடை",
+    eyebrow_wastage:"நகை வேஸ்டேஜ்", h2_wastage:"கடை வாரியாக உற்பத்தி வேஸ்டேஜ்",
+    wastage_sub:"வேஸ்டேஜ் ஒவ்வொரு சரிபார்க்கப்பட்ட கடையாலும் நிர்ணயிக்கப்பட்டு புதுப்பிக்கப்படுகிறது, Thangam அல்ல. இது வடிவமைப்பு சிக்கலும் நகைக்காரரைப் பொறுத்தும் மாறுபடும் — வாங்குவதற்கு முன் கவுண்டரில் சரியான புள்ளிவிவரத்தை உறுதிப்படுத்தவும்.",
+    wastage_demo_note:"விளக்கத்திற்காக மாதிரி புள்ளிவிவரங்கள் காட்டப்படுகின்றன. உற்பத்தியில், இங்குள்ள ஒவ்வொரு மதிப்பும் கடையால் வழங்கப்பட்டு புதுப்பிக்கப்படும், Thangam உருவாக்காது.",
+    th_wastage_pct:"வேஸ்டேஜ் %", th_wastage_wt:"வேஸ்டேஜ் எடை", th_total_wt:"மொத்த வசூலிக்கப்படும் தங்க எடை",
+    eyebrow_shop:"ஆன்லைனில் தங்கம் வாங்குங்கள்", h2_shop:"சரிபார்க்கப்பட்ட நகைகளை நேரடி விலையில் வாங்குங்கள்",
+    shop_sub:"சரிபார்க்கப்பட்ட கடைகளில் இருந்து தேடி, ஒப்பிட்டு வாங்குங்கள் — நேரடி டிராக்கிங், இன்வாய்ஸ் மற்றும் ரிட்டர்னுடன்.",
+    shop_search_ph:"நகை தேடுங்கள் (எ.கா. வளையல், 22K, Tanishq)…",
+    shop_sort:"வரிசைப்படுத்து", shop_sort_popular:"பிரபலமானவை", shop_sort_low:"விலை: குறைவிலிருந்து அதிகம்", shop_sort_high:"விலை: அதிகத்திலிருந்து குறைவு",
+    shop_note:"செக்அவுட் ஒரு செயல்படும் டெமோ ஓட்டம் (ஆர்டர் உறுதிப்படுத்தல், டிராக்கிங், இன்வாய்ஸ், ரிட்டர்ன்) — உண்மையான பணம் செலுத்த உரிமம் பெற்ற பேமெண்ட் கேட்வே தேவை.",
+    shop_empty:"உங்கள் தேடலுக்கு பொருந்தும் பொருட்கள் இல்லை — வேறு வகை அல்லது சொல்லை முயற்சிக்கவும்.",
+    btn_add_cart:"கார்ட்டில் சேர்", btn_buy_now:"இப்போது வாங்கு", btn_remove:"நீக்கு",
+    cart_title:"உங்கள் கார்ட்", cart_total:"மொத்தம்", btn_checkout:"செக்அவுட்",
+    cart_fine:"டெமோ செக்அவுட் — கீழே நீங்கள் டிராக் செய்யக்கூடிய ஒரு மாதிரி ஆர்டரை உருவாக்குகிறது. உண்மையான பணம் வாங்கப்படாது.",
+    cart_empty:"உங்கள் கார்ட் காலியாக உள்ளது.",
+    orders_title:"என் ஆர்டர்கள்", orders_empty:"இதுவரை ஆர்டர்கள் இல்லை — கடை பிரிவில் நீங்கள் வாங்கும் பொருட்கள் இங்கே டிராக்கிங், இன்வாய்ஸ் மற்றும் ரிட்டர்னுடன் தோன்றும்.",
+    status_processing:"செயலாக்கத்தில்", status_shipped:"அனுப்பப்பட்டது", status_delivered:"டெலிவரி ஆனது", status_return:"ரிட்டர்ன் கோரப்பட்டது",
+    btn_invoice:"இன்வாய்ஸ் பதிவிறக்கு", btn_return:"ரிட்டர்ன் கோரிக்கை",
+    checkout_success:"ஆர்டர் {id} வைக்கப்பட்டது. உங்கள் Customer டாஷ்போர்டில் இருந்து எப்போது வேண்டுமானாலும் டிராக் செய்யுங்கள்.",
+    return_prompt:"இந்த ஆர்டரை ஏன் திரும்பப் கொடுக்கிறீர்கள் என்று சுருக்கமாக கூறுங்கள்:",
+    return_submitted:"ரிட்டர்ன் கோரிக்கை சமர்ப்பிக்கப்பட்டது. எங்கள் குழு பிக்கப் ஏற்பாடு செய்ய தொடர்பு கொள்ளும்.",
+    search_recent:"சமீபத்திய தேடல்கள்", search_trending:"டிரெண்டிங் தேடல்கள்",
+    welcome_msg:"உங்கள் ஸ்மார்ட் தங்க தோழன். விலைகளை ஒப்பிடுங்கள், நகை மதிப்பை மதிப்பிடுங்கள், நம்பகமான கடைகளைக் கண்டறியுங்கள், நம்பிக்கையுடன் தங்க முடிவுகளை எடுங்கள்.", welcome_loading:"உங்கள் தங்க தோழன் ஏற்றப்படுகிறது…", welcome_enter:"Thangam-ஐ திற",
+    review_title:"விமர்சனம் எழுதுங்கள்", review_store:"கடை", review_rating:"உங்கள் மதிப்பீடு", review_name:"உங்கள் பெயர்", review_text:"உங்கள் விமர்சனம்", review_photo:"புகைப்படம் சேர் (விருப்பம்)", review_submit:"விமர்சனத்தை சமர்ப்பி", review_thanks:"நன்றி — மதிப்பாய்வுக்குப் பிறகு உங்கள் விமர்சனம் தோன்றும்.", review_pending_title:"நிலுவையிலுள்ள விமர்சனங்கள்", review_no_pending:"மதிப்பாய்வுக்கு எந்த விமர்சனமும் காத்திருக்கவில்லை.", btn_approve:"ஏற்று", btn_reject:"நிராகரி", btn_write_review:"விமர்சனம் எழுதுங்கள்",
+  },
+  te: {
+    nav_rate:"బంగారం రేటు", nav_calc:"కాలిక్యులేటర్", nav_loans:"రుణాలు", nav_jewelry:"ఆభరణాలు", nav_dash:"డాష్‌బోర్డులు", nav_faq:"తరచుగా అడిగే ప్రశ్నలు", nav_contact:"సంప్రదించండి", nav_contacts:"సంప్రదింపులు",
+    search_ph:"రేట్లు, రుణదాతలు, ఆభరణాలు, ప్రశ్నలు వెతకండి…", sign_in:"సైన్ ఇన్",
+    hero_h1_pre:"Thangam — మీ బంగారం", hero_h1_em:"నిజంగా", hero_h1_post:"ఎంత విలువైనదో తెలుసుకోండి.",
+    hero_p:"బరువు మరియు స్వచ్ఛత ఆధారంగా ఆభరణాల విలువను అంచనా వేయండి, బంగారు రుణ ఆఫర్‌లను పోల్చండి, బ్రాంచ్‌కు వెళ్లే ముందే ధృవీకరించబడిన విక్రేతలు మరియు రుణదాతలతో నేరుగా కనెక్ట్ అవ్వండి.",
+    hero_btn_value:"నా బంగారం విలువ చూడండి", hero_btn_loans:"రుణాలను పోల్చండి",
+    hero_hl1:"ధృవీకరించబడిన భాగస్వాములు", hero_hl2:"రేట్లు గంటకోసారి అప్‌డేట్ అవుతాయి", hero_card_label:"నేటి బెంచ్‌మార్క్ రేటు",
+    eyebrow_rate:"లైవ్ బంగారం రేటు", h2_rate:"నేటి బంగారం రేటు",
+    eyebrow_calc:"బంగారం బరువు & స్వచ్ఛత కాలిక్యులేటర్", h2_calc:"మీ ఆభరణం విలువను అంచనా వేయండి",
+    eyebrow_loans:"బంగారు రుణాలను పోల్చండి", h2_loans:"మీ బంగారంపై ఉత్తమ రుణాన్ని కనుగొనండి",
+    eyebrow_jewelry:"ఆభరణాల ధర పోలిక",
+    eyebrow_partners:"విశ్వసనీయ భాగస్వాములు",
+    eyebrow_emi:"EMI & వడ్డీ కాలిక్యులేటర్", h2_emi:"మీ నెలవారీ చెల్లింపు ఎలా ఉంటుంది?",
+    eyebrow_dash:"డాష్‌బోర్డులు", h2_dash:"ఒక వేదిక, మూడు దృక్కోణాలు",
+    tab_customer:"కస్టమర్", tab_business:"వ్యాపారం", tab_admin:"అడ్మిన్",
+    eyebrow_reviews:"కస్టమర్ సమీక్షలు", h2_reviews:"ప్రజలు ఇక్కడ ఏమి కనుగొన్నారు",
+    eyebrow_faq:"తరచుగా అడిగే ప్రశ్నలు", h2_faq:"సూటిగా సమాధానాలు",
+    eyebrow_contact:"సంప్రదించండి", h2_contact:"Thangam బృందంతో మాట్లాడండి",
+    eyebrow_pc:"ప్లాట్‌ఫారమ్ సంప్రదింపులు", h2_pc:"Thangam వెనుక ఉన్నది ఎవరు",
+    field_jtype:"ఆభరణ రకం", field_purity:"స్వచ్ఛత", field_weight:"బరువు (గ్రాములు)",
+    filter_max_interest:"గరిష్ట వడ్డీ", filter_tenure:"కాలవ్యవధి", chip_all:"అన్నీ", chip_bank:"బ్యాంక్", chip_nbfc:"NBFC",
+    btn_contact:"సంప్రదించండి", btn_send_message:"సందేశం పంపండి", btn_send_request:"అభ్యర్థన పంపండి", btn_close:"మూసివేయండి", btn_update_offer:"ఆఫర్ నవీకరించండి",
+    footer_note:"రేట్లు సూచనాత్మకమైనవి, లావాదేవీ యోగ్యమైనవి కావు.", footer_tags:"రిఫరల్ కమిషన్ · ఫీచర్డ్ లిస్టింగ్‌లు · ప్రీమియం సభ్యత్వాలు · లీడ్ జనరేషన్",
+    loc_prompt:"మీ లొకేషన్‌ను షేర్ చేసి సమీపంలోని ధృవీకరించబడిన దుకాణాలను చూడండి.", loc_use_button:"నా లొకేషన్ ఉపయోగించండి", loc_change:"మాన్యువల్‌గా మార్చండి", loc_manual_ph:"మీ నగరాన్ని నమోదు చేయండి",
+    loc_detecting:"మీ లొకేషన్ కనుగొనబడుతోంది…", loc_denied:"లొకేషన్ అనుమతి తిరస్కరించబడింది — దయచేసి నగరాన్ని మాన్యువల్‌గా నమోదు చేయండి.", loc_unsupported:"ఈ బ్రౌజర్‌లో లొకేషన్ మద్దతు లేదు.",
+    th_store:"దుకాణం", th_making:"మేకింగ్ ఛార్జ్", th_gst:"జిఎస్‌టి (3%)", th_final:"తుది ధర", th_contact:"సంప్రదించండి",
+    modal_request:"కాల్‌బ్యాక్ కోరండి", modal_call_directly:"నేరుగా కాల్ చేయండి", modal_ph_name:"మీ పూర్తి పేరు", modal_ph_phone:"ఫోన్ నంబర్",
+    modal_fine:"సమర్పించడం ద్వారా, ఎంచుకున్న వ్యాపారం ఈ విచారణకు సంబంధించి మిమ్మల్ని సంప్రదించవచ్చని మీరు అంగీకరిస్తున్నారు. ఇది విజయవంతంగా పూర్తయితే Thangam కి రిఫరల్ కమిషన్ లభించవచ్చు.",
+    contact_success:"ధన్యవాదాలు — మేము త్వరలో మిమ్మల్ని సంప్రదిస్తాము.",
+    pc_owner_role:"వ్యవస్థాపకుడు & సైట్ యజమాని", pc_partner_role:"పార్టనర్ & స్టోర్ మేనేజర్",
+    pc_partner_note:"ఆన్‌బోర్డింగ్, రేటు నవీకరణలు, లీడ్ నిర్వహణ మరియు ఫీచర్డ్ లిస్టింగ్‌లు/ప్రీమియం సభ్యత్వాల బిల్లింగ్. కాల్ లేదా ఇమెయిల్ చేయండి — బృంద సభ్యుడు నేరుగా సంప్రదిస్తారు.",
+    rate_updated:"గంటకోసారి నవీకరణ · చివరి రిఫ్రెష్ 09:00 IST",
+    calc_result_label:"అంచనా విలువ", calc_content_label:"బంగారం పరిమాణం", calc_rate_label:"ఉపయోగించిన రేటు", calc_item_label:"వస్తువు",
+    calc_footnote:"మేకింగ్ ఛార్జీలు, జిఎస్‌టి మరియు కొనుగోలుదారు/రుణదాత విధించే ఏవైనా తగ్గింపులు మినహాయించబడ్డాయి.",
+    emi_monthly_label:"నెలవారీ EMI", emi_interest_label:"మొత్తం చెల్లించవలసిన వడ్డీ", emi_total_label:"మొత్తం తిరిగి చెల్లింపు", emi_rate_label:"ప్రభావవంతమైన రేటు",
+    per_gram:"గ్రాముకు", today_word:"ఈరోజు",
+    l_rate_accepted:"ఆమోదించిన రేటు", l_est_loan:"అంచనా రుణం (", l_processing_fee:"ప్రాసెసింగ్ ఫీజు", l_tenure_options:"కాలవ్యవధి ఎంపికలు", l_est_repay:"అంచనా తిరిగి చెల్లింపు (", l_direct_line:"నేరుగా నంబర్:",
+    jewelry_title:"అదే {type}, నాలుగు ధరలు", jewelry_sub:"{w}గ్రా, {p} స్వచ్ఛత ఆధారంగా — పైన కాలిక్యులేటర్‌లోని ప్రస్తుత బరువు మరియు స్వచ్ఛతను ఉపయోగించి.",
+    no_lenders:"ఈ ఫిల్టర్‌లతో ఏ రుణదాత సరిపోలలేదు — గరిష్ట వడ్డీని పెంచి ప్రయత్నించండి.",
+    nav_wastage:"వేస్టేజ్", nav_shop:"షాప్",
+    eyebrow_wastage:"ఆభరణ వేస్టేజ్", h2_wastage:"దుకాణాల వారీగా తయారీ వేస్టేజ్",
+    wastage_sub:"వేస్టేజ్‌ను ప్రతి ధృవీకరించబడిన దుకాణం సెట్ చేసి అప్‌డేట్ చేస్తుంది, Thangam కాదు. ఇది డిజైన్ సంక్లిష్టత మరియు జ్యువెలర్‌ను బట్టి మారుతుంది — కొనుగోలు చేసే ముందు కౌంటర్‌లో ఖచ్చితమైన సంఖ్యను నిర్ధారించుకోండి.",
+    wastage_demo_note:"ప్రదర్శన కోసం నమూనా అంకెలు చూపబడ్డాయి. ఉత్పత్తిలో, ఇక్కడ ప్రతి విలువ దుకాణం ద్వారానే అందించబడి తాజాగా ఉంచబడుతుంది, Thangam ద్వారా సృష్టించబడదు.",
+    th_wastage_pct:"వేస్టేజ్ %", th_wastage_wt:"వేస్టేజ్ బరువు", th_total_wt:"మొత్తం వసూలు చేసిన బంగారం బరువు",
+    eyebrow_shop:"ఆన్‌లైన్‌లో బంగారం కొనండి", h2_shop:"ధృవీకరించబడిన ఆభరణాలను లైవ్ ధరకు కొనండి",
+    shop_sub:"ధృవీకరించబడిన దుకాణాల నుండి వెతకండి, పోల్చండి మరియు కొనండి — లైవ్ ట్రాకింగ్, ఇన్‌వాయిస్ మరియు రిటర్న్‌లతో.",
+    shop_search_ph:"ఆభరణాలు వెతకండి (ఉదా. బంగిల్, 22K, Tanishq)…",
+    shop_sort:"క్రమం", shop_sort_popular:"జనాదరణ పొందినవి", shop_sort_low:"ధర: తక్కువ నుండి ఎక్కువ", shop_sort_high:"ధర: ఎక్కువ నుండి తక్కువ",
+    shop_note:"చెక్అవుట్ ఒక పని చేసే డెమో ప్రవాహం (ఆర్డర్ నిర్ధారణ, ట్రాకింగ్, ఇన్‌వాయిస్, రిటర్న్‌లు) — నిజమైన చెల్లింపులకు లైవ్ బ్యాకెండ్‌లో లైసెన్స్ పొందిన పేమెంట్ గేట్‌వే అవసరం.",
+    shop_empty:"మీ శోధనకు సరిపోలే ఉత్పత్తులు లేవు — వేరే రకం లేదా పదాన్ని ప్రయత్నించండి.",
+    btn_add_cart:"కార్ట్‌కు జోడించు", btn_buy_now:"ఇప్పుడే కొనండి", btn_remove:"తీసివేయి",
+    cart_title:"మీ కార్ట్", cart_total:"మొత్తం", btn_checkout:"చెక్అవుట్",
+    cart_fine:"డెమో చెక్అవుట్ — మీరు దిగువన ట్రాక్ చేయగల మాక్ ఆర్డర్‌ను సృష్టిస్తుంది. నిజమైన చెల్లింపు తీసుకోబడదు.",
+    cart_empty:"మీ కార్ట్ ఖాళీగా ఉంది.",
+    orders_title:"నా ఆర్డర్లు", orders_empty:"ఇంకా ఆర్డర్లు లేవు — షాప్ విభాగంలో మీరు కొనుగోలు చేసే వస్తువులు ట్రాకింగ్, ఇన్‌వాయిస్ మరియు రిటర్న్‌లతో ఇక్కడ కనిపిస్తాయి.",
+    status_processing:"ప్రాసెసింగ్", status_shipped:"పంపిణీ చేయబడింది", status_delivered:"డెలివర్ చేయబడింది", status_return:"రిటర్న్ అభ్యర్థించబడింది",
+    btn_invoice:"ఇన్‌వాయిస్ డౌన్‌లోడ్ చేయండి", btn_return:"రిటర్న్ అభ్యర్థించండి",
+    checkout_success:"ఆర్డర్ {id} నమోదైంది. దీన్ని మీ Customer డాష్‌బోర్డ్ నుండి ఎప్పుడైనా ట్రాక్ చేయండి.",
+    return_prompt:"మీరు ఈ ఆర్డర్‌ను ఎందుకు తిరిగి ఇస్తున్నారో క్లుప్తంగా చెప్పండి:",
+    return_submitted:"రిటర్న్ అభ్యర్థన సమర్పించబడింది. మా బృందం పికప్ ఏర్పాటు చేయడానికి సంప్రదిస్తుంది.",
+    search_recent:"ఇటీవలి శోధనలు", search_trending:"ట్రెండింగ్ శోధనలు",
+    welcome_msg:"మీ స్మార్ట్ గోల్డ్ సహచరుడు. ధరలను పోల్చండి, ఆభరణాల విలువను అంచనా వేయండి, విశ్వసనీయ దుకాణాలను కనుగొనండి, నమ్మకంతో బంగారం నిర్ణయాలు తీసుకోండి.", welcome_loading:"మీ గోల్డ్ సహచరుడు లోడ్ అవుతోంది…", welcome_enter:"Thangam లోకి ప్రవేశించండి",
+    review_title:"సమీక్ష రాయండి", review_store:"దుకాణం", review_rating:"మీ రేటింగ్", review_name:"మీ పేరు", review_text:"మీ సమీక్ష", review_photo:"ఫోటో జోడించండి (ఐచ్ఛికం)", review_submit:"సమీక్ష సమర్పించండి", review_thanks:"ధన్యవాదాలు — మోడరేషన్ తర్వాత మీ సమీక్ష కనిపిస్తుంది.", review_pending_title:"పెండింగ్ సమీక్షలు", review_no_pending:"మోడరేషన్ కోసం ఎలాంటి సమీక్షలు లేవు.", btn_approve:"ఆమోదించండి", btn_reject:"తిరస్కరించండి", btn_write_review:"సమీక్ష రాయండి",
+  },
+  kn: {
+    nav_rate:"ಚಿನ್ನದ ದರ", nav_calc:"ಕ್ಯಾಲ್ಕುಲೇಟರ್", nav_loans:"ಸಾಲಗಳು", nav_jewelry:"ಆಭರಣಗಳು", nav_dash:"ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗಳು", nav_faq:"ಪ್ರಶ್ನೋತ್ತರ", nav_contact:"ಸಂಪರ್ಕಿಸಿ", nav_contacts:"ಸಂಪರ್ಕಗಳು",
+    search_ph:"ದರಗಳು, ಸಾಲದಾತರು, ಆಭರಣಗಳು, ಪ್ರಶ್ನೆಗಳನ್ನು ಹುಡುಕಿ…", sign_in:"ಸೈನ್ ಇನ್",
+    hero_h1_pre:"Thangam — ನಿಮ್ಮ ಚಿನ್ನದ ನಿಜವಾದ", hero_h1_em:"ಬೆಲೆ", hero_h1_post:"ತಿಳಿಯಿರಿ.",
+    hero_p:"ತೂಕ ಮತ್ತು ಶುದ್ಧತೆಯ ಆಧಾರದ ಮೇಲೆ ಆಭರಣದ ಮೌಲ್ಯವನ್ನು ಅಂದಾಜಿಸಿ, ಚಿನ್ನದ ಸಾಲದ ಆಫರ್‌ಗಳನ್ನು ಹೋಲಿಸಿ, ಶಾಖೆಗೆ ಹೋಗುವ ಮೊದಲೇ ಪರಿಶೀಲಿಸಿದ ಮಾರಾಟಗಾರರು ಮತ್ತು ಸಾಲದಾತರೊಂದಿಗೆ ನೇರವಾಗಿ ಸಂಪರ್ಕ ಸಾಧಿಸಿ.",
+    hero_btn_value:"ನನ್ನ ಚಿನ್ನದ ಮೌಲ್ಯ ನೋಡಿ", hero_btn_loans:"ಸಾಲಗಳನ್ನು ಹೋಲಿಸಿ",
+    hero_hl1:"ಪರಿಶೀಲಿಸಿದ ಪಾಲುದಾರರು", hero_hl2:"ದರಗಳು ಪ್ರತಿ ಗಂಟೆಗೆ ನವೀಕರಿಸಲಾಗುತ್ತದೆ", hero_card_label:"ಇಂದಿನ ಮಾನದಂಡ ದರ",
+    eyebrow_rate:"ಲೈವ್ ಚಿನ್ನದ ದರ", h2_rate:"ಇಂದಿನ ಚಿನ್ನದ ದರ",
+    eyebrow_calc:"ಚಿನ್ನದ ತೂಕ & ಶುದ್ಧತೆ ಕ್ಯಾಲ್ಕುಲೇಟರ್", h2_calc:"ನಿಮ್ಮ ಆಭರಣದ ಮೌಲ್ಯವನ್ನು ಅಂದಾಜಿಸಿ",
+    eyebrow_loans:"ಚಿನ್ನದ ಸಾಲಗಳನ್ನು ಹೋಲಿಸಿ", h2_loans:"ನಿಮ್ಮ ಚಿನ್ನದ ಮೇಲೆ ಉತ್ತಮ ಸಾಲವನ್ನು ಹುಡುಕಿ",
+    eyebrow_jewelry:"ಆಭರಣ ಬೆಲೆ ಹೋಲಿಕೆ",
+    eyebrow_partners:"ವಿಶ್ವಾಸಾರ್ಹ ಪಾಲುದಾರರು",
+    eyebrow_emi:"EMI & ಬಡ್ಡಿ ಕ್ಯಾಲ್ಕುಲೇಟರ್", h2_emi:"ನಿಮ್ಮ ಮಾಸಿಕ ಪಾವತಿ ಹೇಗಿರುತ್ತದೆ?",
+    eyebrow_dash:"ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗಳು", h2_dash:"ಒಂದು ವೇದಿಕೆ, ಮೂರು ದೃಷ್ಟಿಕೋನಗಳು",
+    tab_customer:"ಗ್ರಾಹಕ", tab_business:"ವ್ಯಾಪಾರ", tab_admin:"ನಿರ್ವಾಹಕ",
+    eyebrow_reviews:"ಗ್ರಾಹಕ ವಿಮರ್ಶೆಗಳು", h2_reviews:"ಜನರು ಇಲ್ಲಿ ಏನು ಕಂಡುಕೊಂಡರು",
+    eyebrow_faq:"ಪ್ರಶ್ನೋತ್ತರ", h2_faq:"ಸ್ಪಷ್ಟ ಉತ್ತರಗಳು",
+    eyebrow_contact:"ಸಂಪರ್ಕಿಸಿ", h2_contact:"Thangam ತಂಡದೊಂದಿಗೆ ಮಾತನಾಡಿ",
+    eyebrow_pc:"ವೇದಿಕೆ ಸಂಪರ್ಕಗಳು", h2_pc:"Thangam ಹಿಂದೆ ಯಾರಿದ್ದಾರೆ",
+    field_jtype:"ಆಭರಣ ಪ್ರಕಾರ", field_purity:"ಶುದ್ಧತೆ", field_weight:"ತೂಕ (ಗ್ರಾಂ)",
+    filter_max_interest:"ಗರಿಷ್ಠ ಬಡ್ಡಿ", filter_tenure:"ಅವಧಿ", chip_all:"ಎಲ್ಲಾ", chip_bank:"ಬ್ಯಾಂಕ್", chip_nbfc:"NBFC",
+    btn_contact:"ಸಂಪರ್ಕಿಸಿ", btn_send_message:"ಸಂದೇಶ ಕಳುಹಿಸಿ", btn_send_request:"ವಿನಂತಿ ಕಳುಹಿಸಿ", btn_close:"ಮುಚ್ಚಿ", btn_update_offer:"ಆಫರ್ ನವೀಕರಿಸಿ",
+    footer_note:"ದರಗಳು ಸೂಚಕವಾಗಿವೆ, ವಹಿವಾಟಿಗೆ ಯೋಗ್ಯವಲ್ಲ.", footer_tags:"ರೆಫರಲ್ ಕಮಿಷನ್ · ಫೀಚರ್ಡ್ ಲಿಸ್ಟಿಂಗ್‌ಗಳು · ಪ್ರೀಮಿಯಂ ಚಂದಾದಾರಿಕೆಗಳು · ಲೀಡ್ ಜನರೇಷನ್",
+    loc_prompt:"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಂಡು ಹತ್ತಿರದ ಪರಿಶೀಲಿಸಿದ ಅಂಗಡಿಗಳನ್ನು ನೋಡಿ.", loc_use_button:"ನನ್ನ ಸ್ಥಳ ಬಳಸಿ", loc_change:"ಕೈಯಾರೆ ಬದಲಾಯಿಸಿ", loc_manual_ph:"ನಿಮ್ಮ ನಗರವನ್ನು ನಮೂದಿಸಿ",
+    loc_detecting:"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪತ್ತೆ ಮಾಡಲಾಗುತ್ತಿದೆ…", loc_denied:"ಸ್ಥಳ ಅನುಮತಿ ನಿರಾಕರಿಸಲಾಗಿದೆ — ದಯವಿಟ್ಟು ನಗರವನ್ನು ಕೈಯಾರೆ ನಮೂದಿಸಿ.", loc_unsupported:"ಈ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಸ್ಥಳ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ.",
+    th_store:"ಅಂಗಡಿ", th_making:"ಮೇಕಿಂಗ್ ಚಾರ್ಜ್", th_gst:"ಜಿಎಸ್‌ಟಿ (3%)", th_final:"ಅಂತಿಮ ಬೆಲೆ", th_contact:"ಸಂಪರ್ಕಿಸಿ",
+    modal_request:"ಕಾಲ್‌ಬ್ಯಾಕ್ ವಿನಂತಿಸಿ", modal_call_directly:"ನೇರವಾಗಿ ಕರೆ ಮಾಡಿ", modal_ph_name:"ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು", modal_ph_phone:"ಫೋನ್ ಸಂಖ್ಯೆ",
+    modal_fine:"ಸಲ್ಲಿಸುವ ಮೂಲಕ, ಆಯ್ಕೆ ಮಾಡಿದ ವ್ಯವಹಾರವು ಈ ವಿಚಾರಣೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಬಹುದೆಂದು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ಇದು ಯಶಸ್ವಿಯಾದರೆ Thangam ಗೆ ರೆಫರಲ್ ಕಮಿಷನ್ ಸಿಗಬಹುದು.",
+    contact_success:"ಧನ್ಯವಾದಗಳು — ನಾವು ಶೀಘ್ರದಲ್ಲೇ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.",
+    pc_owner_role:"ಸಂಸ್ಥಾಪಕ & ಸೈಟ್ ಮಾಲೀಕ", pc_partner_role:"ಪಾಲುದಾರ & ಸ್ಟೋರ್ ಮ್ಯಾನೇಜರ್",
+    pc_partner_note:"ಆನ್‌ಬೋರ್ಡಿಂಗ್, ದರ ನವೀಕರಣಗಳು, ಲೀಡ್ ನಿರ್ವಹಣೆ ಮತ್ತು ಫೀಚರ್ಡ್ ಲಿಸ್ಟಿಂಗ್‌/ಪ್ರೀಮಿಯಂ ಚಂದಾದಾರಿಕೆ ಬಿಲ್ಲಿಂಗ್. ಕರೆ ಅಥವಾ ಇಮೇಲ್ ಮಾಡಿ — ತಂಡದ ಸದಸ್ಯರು ನೇರವಾಗಿ ಸಂಪರ್ಕಿಸುತ್ತಾರೆ.",
+    rate_updated:"ಪ್ರತಿ ಗಂಟೆಗೆ ನವೀಕರಣ · ಕೊನೆಯ ರಿಫ್ರೆಶ್ 09:00 IST",
+    calc_result_label:"ಅಂದಾಜು ಮೌಲ್ಯ", calc_content_label:"ಚಿನ್ನದ ಅಂಶ", calc_rate_label:"ಬಳಸಿದ ದರ", calc_item_label:"ವಸ್ತು",
+    calc_footnote:"ಮೇಕಿಂಗ್ ಚಾರ್ಜ್, ಜಿಎಸ್‌ಟಿ ಮತ್ತು ಖರೀದಿದಾರ/ಸಾಲದಾತ ವಿಧಿಸಬಹುದಾದ ಯಾವುದೇ ಕಡಿತಗಳನ್ನು ಹೊರತುಪಡಿಸುತ್ತದೆ.",
+    emi_monthly_label:"ಮಾಸಿಕ EMI", emi_interest_label:"ಒಟ್ಟು ಪಾವತಿಸಬೇಕಾದ ಬಡ್ಡಿ", emi_total_label:"ಒಟ್ಟು ಮರುಪಾವತಿ", emi_rate_label:"ಪರಿಣಾಮಕಾರಿ ದರ",
+    per_gram:"ಪ್ರತಿ ಗ್ರಾಂಗೆ", today_word:"ಇಂದು",
+    l_rate_accepted:"ಸ್ವೀಕೃತ ದರ", l_est_loan:"ಅಂದಾಜು ಸಾಲ (", l_processing_fee:"ಪ್ರೊಸೆಸಿಂಗ್ ಶುಲ್ಕ", l_tenure_options:"ಅವಧಿ ಆಯ್ಕೆಗಳು", l_est_repay:"ಅಂದಾಜು ಮರುಪಾವತಿ (", l_direct_line:"ನೇರ ಸಂಖ್ಯೆ:",
+    jewelry_title:"ಅದೇ {type}, ನಾಲ್ಕು ಬೆಲೆಗಳು", jewelry_sub:"{w}ಗ್ರಾಂ, {p} ಶುದ್ಧತೆಯ ಆಧಾರದ ಮೇಲೆ — ಮೇಲಿನ ಕ್ಯಾಲ್ಕುಲೇಟರ್‌ನ ಪ್ರಸ್ತುತ ತೂಕ ಮತ್ತು ಶುದ್ಧತೆಯನ್ನು ಬಳಸಿ.",
+    no_lenders:"ಈ ಫಿಲ್ಟರ್‌ಗಳಿಗೆ ಯಾವುದೇ ಸಾಲದಾತ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ — ಗರಿಷ್ಠ ಬಡ್ಡಿಯನ್ನು ಹೆಚ್ಚಿಸಿ ಪ್ರಯತ್ನಿಸಿ.",
+    nav_wastage:"ವೇಸ್ಟೇಜ್", nav_shop:"ಶಾಪ್",
+    eyebrow_wastage:"ಆಭರಣ ವೇಸ್ಟೇಜ್", h2_wastage:"ಅಂಗಡಿವಾರು ಉತ್ಪಾದನಾ ವೇಸ್ಟೇಜ್",
+    wastage_sub:"ವೇಸ್ಟೇಜ್ ಅನ್ನು ಪ್ರತಿ ಪರಿಶೀಲಿಸಿದ ಅಂಗಡಿ ನಿಗದಿಪಡಿಸಿ ನವೀಕರಿಸುತ್ತದೆ, Thangam ಅಲ್ಲ. ಇದು ವಿನ್ಯಾಸದ ಸಂಕೀರ್ಣತೆ ಮತ್ತು ಆಭರಣಕಾರರನ್ನು ಅವಲಂಬಿಸಿ ಬದಲಾಗುತ್ತದೆ — ಖರೀದಿಸುವ ಮೊದಲು ಕೌಂಟರ್‌ನಲ್ಲಿ ನಿಖರ ಸಂಖ್ಯೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.",
+    wastage_demo_note:"ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾದರಿ ಅಂಕಿಅಂಶಗಳನ್ನು ತೋರಿಸಲಾಗಿದೆ. ಉತ್ಪಾದನೆಯಲ್ಲಿ, ಇಲ್ಲಿನ ಪ್ರತಿ ಮೌಲ್ಯವನ್ನು ಅಂಗಡಿ ಸ್ವತಃ ಒದಗಿಸಿ ನವೀಕರಿಸುತ್ತದೆ, Thangam ರಚಿಸುವುದಿಲ್ಲ.",
+    th_wastage_pct:"ವೇಸ್ಟೇಜ್ %", th_wastage_wt:"ವೇಸ್ಟೇಜ್ ತೂಕ", th_total_wt:"ಒಟ್ಟು ವಿಧಿಸಲಾದ ಚಿನ್ನದ ತೂಕ",
+    eyebrow_shop:"ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಚಿನ್ನ ಖರೀದಿಸಿ", h2_shop:"ಪರಿಶೀಲಿಸಿದ ಆಭರಣಗಳನ್ನು ಲೈವ್ ಬೆಲೆಗೆ ಖರೀದಿಸಿ",
+    shop_sub:"ಪರಿಶೀಲಿಸಿದ ಅಂಗಡಿಗಳಿಂದ ಹುಡುಕಿ, ಹೋಲಿಸಿ ಮತ್ತು ಖರೀದಿಸಿ — ಲೈವ್ ಟ್ರ್ಯಾಕಿಂಗ್, ಇನ್ವಾಯ್ಸ್ ಮತ್ತು ರಿಟರ್ನ್‌ಗಳೊಂದಿಗೆ.",
+    shop_search_ph:"ಆಭರಣ ಹುಡುಕಿ (ಉದಾ. ಬಳೆ, 22K, Tanishq)…",
+    shop_sort:"ವಿಂಗಡಿಸಿ", shop_sort_popular:"ಜನಪ್ರಿಯ", shop_sort_low:"ಬೆಲೆ: ಕಡಿಮೆಯಿಂದ ಹೆಚ್ಚು", shop_sort_high:"ಬೆಲೆ: ಹೆಚ್ಚಿನಿಂದ ಕಡಿಮೆ",
+    shop_note:"ಚೆಕ್‌ಔಟ್ ಒಂದು ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಡೆಮೊ ಹರಿವು (ಆರ್ಡರ್ ದೃಢೀಕರಣ, ಟ್ರ್ಯಾಕಿಂಗ್, ಇನ್ವಾಯ್ಸ್, ರಿಟರ್ನ್‌ಗಳು) — ನಿಜವಾದ ಪಾವತಿಗಳಿಗೆ ಲೈವ್ ಬ್ಯಾಕೆಂಡ್‌ನಲ್ಲಿ ಪರವಾನಗಿ ಪಡೆದ ಪಾವತಿ ಗೇಟ್‌ವೇ ಅಗತ್ಯ.",
+    shop_empty:"ನಿಮ್ಮ ಹುಡುಕಾಟಕ್ಕೆ ಯಾವುದೇ ಉತ್ಪನ್ನಗಳು ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ — ಬೇರೆ ಪ್ರಕಾರ ಅಥವಾ ಪದವನ್ನು ಪ್ರಯತ್ನಿಸಿ.",
+    btn_add_cart:"ಕಾರ್ಟ್‌ಗೆ ಸೇರಿಸಿ", btn_buy_now:"ಈಗ ಖರೀದಿಸಿ", btn_remove:"ತೆಗೆದುಹಾಕಿ",
+    cart_title:"ನಿಮ್ಮ ಕಾರ್ಟ್", cart_total:"ಒಟ್ಟು", btn_checkout:"ಚೆಕ್‌ಔಟ್",
+    cart_fine:"ಡೆಮೊ ಚೆಕ್‌ಔಟ್ — ಕೆಳಗೆ ನೀವು ಟ್ರ್ಯಾಕ್ ಮಾಡಬಹುದಾದ ಮಾಕ್ ಆರ್ಡರ್ ಅನ್ನು ರಚಿಸುತ್ತದೆ. ನಿಜವಾದ ಪಾವತಿ ತೆಗೆದುಕೊಳ್ಳಲಾಗುವುದಿಲ್ಲ.",
+    cart_empty:"ನಿಮ್ಮ ಕಾರ್ಟ್ ಖಾಲಿಯಾಗಿದೆ.",
+    orders_title:"ನನ್ನ ಆರ್ಡರ್‌ಗಳು", orders_empty:"ಇನ್ನೂ ಆರ್ಡರ್‌ಗಳಿಲ್ಲ — ಶಾಪ್ ವಿಭಾಗದಲ್ಲಿ ನೀವು ಖರೀದಿಸುವ ವಸ್ತುಗಳು ಟ್ರ್ಯಾಕಿಂಗ್, ಇನ್ವಾಯ್ಸ್ ಮತ್ತು ರಿಟರ್ನ್‌ಗಳೊಂದಿಗೆ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ.",
+    status_processing:"ಪ್ರೊಸೆಸಿಂಗ್", status_shipped:"ಕಳುಹಿಸಲಾಗಿದೆ", status_delivered:"ತಲುಪಿಸಲಾಗಿದೆ", status_return:"ರಿಟರ್ನ್ ವಿನಂತಿಸಲಾಗಿದೆ",
+    btn_invoice:"ಇನ್ವಾಯ್ಸ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ", btn_return:"ರಿಟರ್ನ್ ವಿನಂತಿಸಿ",
+    checkout_success:"ಆರ್ಡರ್ {id} ಇರಿಸಲಾಗಿದೆ. ಇದನ್ನು ನಿಮ್ಮ Customer ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ ಯಾವಾಗ ಬೇಕಾದರೂ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
+    return_prompt:"ಈ ಆರ್ಡರ್ ಅನ್ನು ಏಕೆ ಹಿಂತಿರುಗಿಸುತ್ತಿದ್ದೀರಿ ಎಂದು ಸಂಕ್ಷಿಪ್ತವಾಗಿ ತಿಳಿಸಿ:",
+    return_submitted:"ರಿಟರ್ನ್ ವಿನಂತಿ ಸಲ್ಲಿಸಲಾಗಿದೆ. ನಮ್ಮ ತಂಡ ಪಿಕಪ್ ವ್ಯವಸ್ಥೆ ಮಾಡಲು ಸಂಪರ್ಕಿಸುತ್ತದೆ.",
+    search_recent:"ಇತ್ತೀಚಿನ ಹುಡುಕಾಟಗಳು", search_trending:"ಟ್ರೆಂಡಿಂಗ್ ಹುಡುಕಾಟಗಳು",
+    welcome_msg:"ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಗೋಲ್ಡ್ ಸಂಗಾತಿ. ಬೆಲೆಗಳನ್ನು ಹೋಲಿಸಿ, ಆಭರಣ ಮೌಲ್ಯವನ್ನು ಅಂದಾಜಿಸಿ, ವಿಶ್ವಾಸಾರ್ಹ ಅಂಗಡಿಗಳನ್ನು ಹುಡುಕಿ, ವಿಶ್ವಾಸದಿಂದ ಚಿನ್ನದ ನಿರ್ಧಾರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಿ.", welcome_loading:"ನಿಮ್ಮ ಗೋಲ್ಡ್ ಸಂಗಾತಿ ಲೋಡ್ ಆಗುತ್ತಿದೆ…", welcome_enter:"Thangam ಪ್ರವೇಶಿಸಿ",
+    review_title:"ವಿಮರ್ಶೆ ಬರೆಯಿರಿ", review_store:"ಅಂಗಡಿ", review_rating:"ನಿಮ್ಮ ರೇಟಿಂಗ್", review_name:"ನಿಮ್ಮ ಹೆಸರು", review_text:"ನಿಮ್ಮ ವಿಮರ್ಶೆ", review_photo:"ಫೋಟೋ ಸೇರಿಸಿ (ಐಚ್ಛಿಕ)", review_submit:"ವಿಮರ್ಶೆ ಸಲ್ಲಿಸಿ", review_thanks:"ಧನ್ಯವಾದಗಳು — ಮಾಡರೇಶನ್ ನಂತರ ನಿಮ್ಮ ವಿಮರ್ಶೆ ಕಾಣಿಸುತ್ತದೆ.", review_pending_title:"ಬಾಕಿ ಇರುವ ವಿಮರ್ಶೆಗಳು", review_no_pending:"ಮಾಡರೇಶನ್‌ಗಾಗಿ ಯಾವುದೇ ವಿಮರ್ಶೆಗಳಿಲ್ಲ.", btn_approve:"ಅನುಮೋದಿಸಿ", btn_reject:"ತಿರಸ್ಕರಿಸಿ", btn_write_review:"ವಿಮರ್ಶೆ ಬರೆಯಿರಿ",
+  },
+  ml: {
+    nav_rate:"സ്വർണ്ണ നിരക്ക്", nav_calc:"കാൽക്കുലേറ്റർ", nav_loans:"വായ്പകൾ", nav_jewelry:"ആഭരണങ്ങൾ", nav_dash:"ഡാഷ്‌ബോർഡുകൾ", nav_faq:"ചോദ്യങ്ങൾ", nav_contact:"ബന്ധപ്പെടുക", nav_contacts:"ബന്ധങ്ങൾ",
+    search_ph:"നിരക്കുകൾ, വായ്പാദാതാക്കൾ, ആഭരണങ്ങൾ, ചോദ്യങ്ങൾ തിരയുക…", sign_in:"സൈൻ ഇൻ",
+    hero_h1_pre:"Thangam — നിങ്ങളുടെ സ്വർണ്ണത്തിന്റെ യഥാർത്ഥ", hero_h1_em:"മൂല്യം", hero_h1_post:"അറിയുക.",
+    hero_p:"ഭാരവും പരിശുദ്ധിയും അടിസ്ഥാനമാക്കി ആഭരണ മൂല്യം കണക്കാക്കുക, സ്വർണ്ണ വായ്പാ ഓഫറുകൾ താരതമ്യം ചെയ്യുക, ബ്രാഞ്ചിൽ പോകുന്നതിന് മുമ്പ് പരിശോധിച്ചുറപ്പിച്ച വ്യാപാരികളുമായും വായ്പാദാതാക്കളുമായും നേരിട്ട് ബന്ധപ്പെടുക.",
+    hero_btn_value:"എന്റെ സ്വർണ്ണത്തിന്റെ മൂല്യം കാണുക", hero_btn_loans:"വായ്പകൾ താരതമ്യം ചെയ്യുക",
+    hero_hl1:"പരിശോധിച്ചുറപ്പിച്ച പങ്കാളികൾ", hero_hl2:"നിരക്കുകൾ ഓരോ മണിക്കൂറിലും അപ്‌ഡേറ്റ് ചെയ്യുന്നു", hero_card_label:"ഇന്നത്തെ അടിസ്ഥാന നിരക്ക്",
+    eyebrow_rate:"തത്സമയ സ്വർണ്ണ നിരക്ക്", h2_rate:"ഇന്നത്തെ സ്വർണ്ണ നിരക്ക്",
+    eyebrow_calc:"സ്വർണ്ണ ഭാരം & പരിശുദ്ധി കാൽക്കുലേറ്റർ", h2_calc:"നിങ്ങളുടെ ആഭരണത്തിന്റെ മൂല്യം കണക്കാക്കുക",
+    eyebrow_loans:"സ്വർണ്ണ വായ്പകൾ താരതമ്യം ചെയ്യുക", h2_loans:"നിങ്ങളുടെ സ്വർണ്ണത്തിന് ഏറ്റവും മികച്ച വായ്പ കണ്ടെത്തുക",
+    eyebrow_jewelry:"ആഭരണ വില താരതമ്യം",
+    eyebrow_partners:"വിശ്വസനീയ പങ്കാളികൾ",
+    eyebrow_emi:"EMI & പലിശ കാൽക്കുലേറ്റർ", h2_emi:"നിങ്ങളുടെ പ്രതിമാസ തുക എത്രയായിരിക്കും?",
+    eyebrow_dash:"ഡാഷ്‌ബോർഡുകൾ", h2_dash:"ഒരു പ്ലാറ്റ്ഫോം, മൂന്ന് വീക്ഷണകോണുകൾ",
+    tab_customer:"ഉപഭോക്താവ്", tab_business:"ബിസിനസ്സ്", tab_admin:"അഡ്മിൻ",
+    eyebrow_reviews:"ഉപഭോക്തൃ അവലോകനങ്ങൾ", h2_reviews:"ആളുകൾ ഇവിടെ കണ്ടെത്തിയത്",
+    eyebrow_faq:"ചോദ്യങ്ങൾ", h2_faq:"ലളിതമായ ഉത്തരങ്ങൾ",
+    eyebrow_contact:"ബന്ധപ്പെടുക", h2_contact:"Thangam ടീമുമായി സംസാരിക്കുക",
+    eyebrow_pc:"പ്ലാറ്റ്‌ഫോം ബന്ധങ്ങൾ", h2_pc:"Thangam-ന് പിന്നിൽ ആരാണ്",
+    field_jtype:"ആഭരണ തരം", field_purity:"പരിശുദ്ധി", field_weight:"ഭാരം (ഗ്രാം)",
+    filter_max_interest:"പരമാവധി പലിശ", filter_tenure:"കാലാവധി", chip_all:"എല്ലാം", chip_bank:"ബാങ്ക്", chip_nbfc:"NBFC",
+    btn_contact:"ബന്ധപ്പെടുക", btn_send_message:"സന്ദേശം അയക്കുക", btn_send_request:"അഭ്യർത്ഥന അയക്കുക", btn_close:"അടയ്ക്കുക", btn_update_offer:"ഓഫർ അപ്‌ഡേറ്റ് ചെയ്യുക",
+    footer_note:"നിരക്കുകൾ സൂചകമാണ്, ഇടപാടിന് യോഗ്യമല്ല.", footer_tags:"റഫറൽ കമ്മീഷൻ · ഫീച്ചേർഡ് ലിസ്റ്റിംഗുകൾ · പ്രീമിയം സബ്‌സ്‌ക്രിപ്ഷനുകൾ · ലീഡ് ജനറേഷൻ",
+    loc_prompt:"നിങ്ങളുടെ സ്ഥാനം പങ്കിട്ട് സമീപത്തെ പരിശോധിച്ചുറപ്പിച്ച കടകൾ കാണുക.", loc_use_button:"എന്റെ സ്ഥാനം ഉപയോഗിക്കുക", loc_change:"സ്വയം മാറ്റുക", loc_manual_ph:"നിങ്ങളുടെ നഗരം നൽകുക",
+    loc_detecting:"നിങ്ങളുടെ സ്ഥാനം കണ്ടെത്തുന്നു…", loc_denied:"സ്ഥാന അനുമതി നിരസിച്ചു — ദയവായി നഗരം സ്വയം നൽകുക.", loc_unsupported:"ഈ ബ്രൗസറിൽ സ്ഥാനം പിന്തുണയ്‌ക്കുന്നില്ല.",
+    th_store:"കട", th_making:"മേക്കിംഗ് ചാർജ്", th_gst:"ജിഎസ്ടി (3%)", th_final:"അന്തിമ വില", th_contact:"ബന്ധപ്പെടുക",
+    modal_request:"കോൾബാക്ക് അഭ്യർത്ഥിക്കുക", modal_call_directly:"നേരിട്ട് വിളിക്കുക", modal_ph_name:"നിങ്ങളുടെ പൂർണ്ണ നാമം", modal_ph_phone:"ഫോൺ നമ്പർ",
+    modal_fine:"സമർപ്പിക്കുന്നതിലൂടെ, തിരഞ്ഞെടുത്ത ബിസിനസ്സ് ഈ അന്വേഷണവുമായി ബന്ധപ്പെട്ട് നിങ്ങളെ ബന്ധപ്പെടാമെന്ന് നിങ്ങൾ സമ്മതിക്കുന്നു. ഇത് വിജയകരമായാൽ Thangam-ന് റഫറൽ കമ്മീഷൻ ലഭിച്ചേക്കാം.",
+    contact_success:"നന്ദി — ഞങ്ങൾ ഉടൻ നിങ്ങളെ ബന്ധപ്പെടും.",
+    pc_owner_role:"സ്ഥാപകൻ & സൈറ്റ് ഉടമ", pc_partner_role:"പാർട്ണർ & സ്റ്റോർ മാനേജർ",
+    pc_partner_note:"ഓൺബോർഡിംഗ്, നിരക്ക് അപ്‌ഡേറ്റുകൾ, ലീഡ് മാനേജ്‌മെന്റ്, ഫീച്ചേർഡ് ലിസ്റ്റിംഗ്/പ്രീമിയം സബ്‌സ്‌ക്രിപ്ഷൻ ബില്ലിംഗ്. വിളിക്കുക അല്ലെങ്കിൽ ഇമെയിൽ ചെയ്യുക — ടീം അംഗം നേരിട്ട് ബന്ധപ്പെടും.",
+    rate_updated:"ഓരോ മണിക്കൂറിലും അപ്‌ഡേറ്റ് · അവസാന റിഫ്രഷ് 09:00 IST",
+    calc_result_label:"കണക്കാക്കിയ മൂല്യം", calc_content_label:"സ്വർണ്ണ ഉള്ളടക്കം", calc_rate_label:"ഉപയോഗിച്ച നിരക്ക്", calc_item_label:"ഇനം",
+    calc_footnote:"മേക്കിംഗ് ചാർജുകൾ, ജിഎസ്ടി, വാങ്ങുന്നയാൾ/വായ്പാദാതാവ് ഈടാക്കുന്ന ഏതെങ്കിലും കിഴിവുകൾ എന്നിവ ഒഴിവാക്കിയിരിക്കുന്നു.",
+    emi_monthly_label:"പ്രതിമാസ EMI", emi_interest_label:"മൊത്തം അടയ്‌ക്കേണ്ട പലിശ", emi_total_label:"മൊത്തം തിരിച്ചടവ്", emi_rate_label:"ഫലപ്രദമായ നിരക്ക്",
+    per_gram:"ഗ്രാമിന്", today_word:"ഇന്ന്",
+    l_rate_accepted:"സ്വീകരിക്കുന്ന നിരക്ക്", l_est_loan:"കണക്കാക്കിയ വായ്പ (", l_processing_fee:"പ്രോസസ്സിംഗ് ഫീസ്", l_tenure_options:"കാലാവധി ഓപ്ഷനുകൾ", l_est_repay:"കണക്കാക്കിയ തിരിച്ചടവ് (", l_direct_line:"നേരിട്ടുള്ള നമ്പർ:",
+    jewelry_title:"ഒരേ {type}, നാല് വിലകൾ", jewelry_sub:"{w}ഗ്രാം, {p} പരിശുദ്ധിയുടെ അടിസ്ഥാനത്തിൽ — മുകളിലെ കാൽക്കുലേറ്ററിന്റെ നിലവിലെ ഭാരവും പരിശുദ്ധിയും ഉപയോഗിച്ച്.",
+    no_lenders:"ഈ ഫിൽട്ടറുകളുമായി ഒരു വായ്പാദാതാവും പൊരുത്തപ്പെടുന്നില്ല — പരമാവധി പലിശ ഉയർത്തി ശ്രമിക്കുക.",
+    nav_wastage:"വേസ്റ്റേജ്", nav_shop:"ഷോപ്പ്",
+    eyebrow_wastage:"ആഭരണ വേസ്റ്റേജ്", h2_wastage:"സ്റ്റോർ അനുസരിച്ച് നിർമ്മാണ വേസ്റ്റേജ്",
+    wastage_sub:"വേസ്റ്റേജ് ഓരോ പരിശോധിച്ചുറപ്പിച്ച സ്റ്റോറും സെറ്റ് ചെയ്ത് അപ്‌ഡേറ്റ് ചെയ്യുന്നു, Thangam അല്ല. ഇത് ഡിസൈൻ സങ്കീർണ്ണതയും ജ്വല്ലറും അനുസരിച്ച് വ്യത്യാസപ്പെടും — വാങ്ങുന്നതിന് മുമ്പ് കൗണ്ടറിൽ കൃത്യമായ കണക്ക് സ്ഥിരീകരിക്കുക.",
+    wastage_demo_note:"പ്രദർശനത്തിനായി സാമ്പിൾ കണക്കുകൾ കാണിച്ചിരിക്കുന്നു. ഉൽപ്പാദനത്തിൽ, ഇവിടെയുള്ള ഓരോ മൂല്യവും സ്റ്റോർ തന്നെ നൽകി പുതുക്കുന്നു, Thangam സൃഷ്ടിക്കുന്നില്ല.",
+    th_wastage_pct:"വേസ്റ്റേജ് %", th_wastage_wt:"വേസ്റ്റേജ് ഭാരം", th_total_wt:"ആകെ ഈടാക്കുന്ന സ്വർണ്ണ ഭാരം",
+    eyebrow_shop:"ഓൺലൈനിൽ സ്വർണ്ണം വാങ്ങുക", h2_shop:"പരിശോധിച്ചുറപ്പിച്ച ആഭരണങ്ങൾ തത്സമയ വിലയിൽ വാങ്ങുക",
+    shop_sub:"പരിശോധിച്ചുറപ്പിച്ച സ്റ്റോറുകളിൽ നിന്ന് തിരയുക, താരതമ്യം ചെയ്യുക, വാങ്ങുക — തത്സമയ ട്രാക്കിംഗ്, ഇൻവോയ്സ്, റിട്ടേണുകൾ എന്നിവയോടെ.",
+    shop_search_ph:"ആഭരണം തിരയുക (ഉദാ. വള, 22K, Tanishq)…",
+    shop_sort:"ക്രമീകരണം", shop_sort_popular:"ജനപ്രിയം", shop_sort_low:"വില: കുറഞ്ഞത് മുതൽ കൂടിയത് വരെ", shop_sort_high:"വില: കൂടിയത് മുതൽ കുറഞ്ഞത് വരെ",
+    shop_note:"ചെക്ക്ഔട്ട് ഒരു പ്രവർത്തിക്കുന്ന ഡെമോ ഫ്ലോ ആണ് (ഓർഡർ സ്ഥിരീകരണം, ട്രാക്കിംഗ്, ഇൻവോയ്സ്, റിട്ടേണുകൾ) — യഥാർത്ഥ പേയ്‌മെന്റുകൾക്ക് ലൈവ് ബാക്കെൻഡിൽ ലൈസൻസുള്ള പേയ്‌മെന്റ് ഗേറ്റ്‌വേ ആവശ്യമാണ്.",
+    shop_empty:"നിങ്ങളുടെ തിരയലിന് പൊരുത്തപ്പെടുന്ന ഉൽപ്പന്നങ്ങളില്ല — മറ്റൊരു തരം അല്ലെങ്കിൽ വാക്ക് പരീക്ഷിക്കുക.",
+    btn_add_cart:"കാർട്ടിൽ ചേർക്കുക", btn_buy_now:"ഇപ്പോൾ വാങ്ങുക", btn_remove:"നീക്കം ചെയ്യുക",
+    cart_title:"നിങ്ങളുടെ കാർട്ട്", cart_total:"ആകെ", btn_checkout:"ചെക്ക്ഔട്ട്",
+    cart_fine:"ഡെമോ ചെക്ക്ഔട്ട് — താഴെ നിങ്ങൾക്ക് ട്രാക്ക് ചെയ്യാവുന്ന ഒരു മോക്ക് ഓർഡർ സൃഷ്ടിക്കുന്നു. യഥാർത്ഥ പേയ്‌മെന്റ് ഈടാക്കില്ല.",
+    cart_empty:"നിങ്ങളുടെ കാർട്ട് ശൂന്യമാണ്.",
+    orders_title:"എന്റെ ഓർഡറുകൾ", orders_empty:"ഇതുവരെ ഓർഡറുകളില്ല — ഷോപ്പ് വിഭാഗത്തിൽ നിങ്ങൾ വാങ്ങുന്ന ഇനങ്ങൾ ട്രാക്കിംഗ്, ഇൻവോയ്സ്, റിട്ടേണുകൾ എന്നിവയോടെ ഇവിടെ ദൃശ്യമാകും.",
+    status_processing:"പ്രോസസ്സിംഗ്", status_shipped:"അയച്ചു", status_delivered:"ഡെലിവർ ചെയ്തു", status_return:"റിട്ടേൺ അഭ്യർത്ഥിച്ചു",
+    btn_invoice:"ഇൻവോയ്സ് ഡൗൺലോഡ് ചെയ്യുക", btn_return:"റിട്ടേൺ അഭ്യർത്ഥിക്കുക",
+    checkout_success:"ഓർഡർ {id} നൽകി. ഇത് നിങ്ങളുടെ Customer ഡാഷ്‌ബോർഡിൽ നിന്ന് എപ്പോൾ വേണമെങ്കിലും ട്രാക്ക് ചെയ്യുക.",
+    return_prompt:"ഈ ഓർഡർ എന്തുകൊണ്ട് തിരികെ നൽകുന്നു എന്ന് ചുരുക്കമായി പറയുക:",
+    return_submitted:"റിട്ടേൺ അഭ്യർത്ഥന സമർപ്പിച്ചു. ഞങ്ങളുടെ ടീം പിക്കപ്പ് ക്രമീകരിക്കാൻ ബന്ധപ്പെടും.",
+    search_recent:"സമീപകാല തിരയലുകൾ", search_trending:"ട്രെൻഡിംഗ് തിരയലുകൾ",
+    welcome_msg:"നിങ്ങളുടെ സ്മാർട്ട് ഗോൾഡ് കൂട്ടാളി. വിലകൾ താരതമ്യം ചെയ്യുക, ആഭരണ മൂല്യം കണക്കാക്കുക, വിശ്വസനീയ സ്റ്റോറുകൾ കണ്ടെത്തുക, ആത്മവിശ്വാസത്തോടെ സ്വർണ്ണ തീരുമാനങ്ങൾ എടുക്കുക.", welcome_loading:"നിങ്ങളുടെ ഗോൾഡ് കൂട്ടാളി ലോഡ് ചെയ്യുന്നു…", welcome_enter:"Thangam-ലേക്ക് പ്രവേശിക്കുക",
+    review_title:"അവലോകനം എഴുതുക", review_store:"സ്റ്റോർ", review_rating:"നിങ്ങളുടെ റേറ്റിംഗ്", review_name:"നിങ്ങളുടെ പേര്", review_text:"നിങ്ങളുടെ അവലോകനം", review_photo:"ഫോട്ടോ ചേർക്കുക (ഐച്ഛികം)", review_submit:"അവലോകനം സമർപ്പിക്കുക", review_thanks:"നന്ദി — മോഡറേഷനുശേഷം നിങ്ങളുടെ അവലോകനം ദൃശ്യമാകും.", review_pending_title:"തീർപ്പുകൽപ്പിക്കാത്ത അവലോകനങ്ങൾ", review_no_pending:"മോഡറേഷനായി അവലോകനങ്ങളൊന്നും ഇല്ല.", btn_approve:"അംഗീകരിക്കുക", btn_reject:"നിരസിക്കുക", btn_write_review:"അവലോകനം എഴുതുക",
+  },
+};
+let currentLang = localStorage.getItem('thangam_lang') || 'en';
+function t(key){ return (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) || TRANSLATIONS.en[key] || key; }
+function applyLanguage(lang){
+  currentLang = lang;
+  localStorage.setItem('thangam_lang', lang);
+  document.getElementById('lang-select').value = lang;
+  document.getElementById('lang-select-m').value = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
+  renderAll();
+  renderRate();
+  renderEmi();
+  renderShopChips();
+  renderShop();
+  renderOrders();
+  renderPendingReviews();
+}
+
+
+/* ============================================================ STATE */
+let state = { jewelryType:"Chain", purity:"22K", weight:12, rateView:"22K", loanInterest:11, loanType:"All", loanTenure:12 };
+let recentSearches = ["22K gold rate today","Muthoot Finance loan"];
+const TRENDING_SEARCHES = ["22K gold rate today","Muthoot Finance gold loan","Tanishq making charges","Gold loan EMI calculator","Nearby jewelry stores"];
+let modalTarget = null;
+let cart = JSON.parse(localStorage.getItem('thangam_cart') || '[]');
+let orders = JSON.parse(localStorage.getItem('thangam_orders') || '[]');
+let shopFilter = { query:"", cat:"All", sort:"popular" };
+
+/* ============================================================ HELPERS */
+function go(id){ document.getElementById(id)?.scrollIntoView({behavior:'smooth', block:'start'}); document.getElementById('mobilenav').classList.remove('open'); }
+function loanMath(provider, principal, months){
+  const r = provider.interest/12/100;
+  const emi = r===0 ? principal/months : (principal*r*Math.pow(1+r,months))/(Math.pow(1+r,months)-1);
+  const total = emi*months;
+  return { emi, total, interestPaid: total-principal };
+}
+
+/* ============================================================ TICKER */
+function renderTicker(){
+  const items = [
+    `24K ₹${TODAY.rate24}/g`, `22K ₹${TODAY.rate22}/g`, `18K ₹${TODAY.rate18}/g`,
+    "Muthoot Finance · 9.5% p.a.", "SBI Gold Loan · 8.7% p.a.", "Manappuram · 10.2% p.a.",
+  ];
+  const loop = [...items, ...items];
+  document.getElementById('ticker').innerHTML = loop.map(t=>`<span class="item"><span class="dot"></span>${t}</span>`).join('');
+}
+
+/* ============================================================ HERO */
+function renderHero(){
+  document.getElementById('hero-rate-22').innerHTML = `${fmtINR(TODAY.rate22)}<span class="u"> /g · 22K</span>`;
+  const html = ["18K","22K","24K"].map(k=>`<div><p class="k">${k}</p><p class="v">₹${RATE_TODAY[k].toLocaleString('en-IN')}</p></div>`).join('');
+  document.getElementById('hero-purity-grid').innerHTML = html;
+}
+
+/* ============================================================ LIVE RATE + CHART */
+function setRateView(v){
+  state.rateView = v;
+  document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===v));
+  renderRate();
+}
+function renderRate(){
+  const change = TODAY.rate22 - YESTERDAY.rate22;
+  const val = state.rateView==="22K" ? TODAY.rate22 : TODAY.rate24;
+  document.getElementById('rate-label').textContent = state.rateView + ' · ' + t('per_gram');
+  document.getElementById('rate-value').textContent = '₹' + val.toLocaleString('en-IN');
+  const up = change>=0;
+  document.getElementById('rate-change').innerHTML = `<span class="${up?'change-up':'change-down'}" style="display:flex;align-items:center;gap:6px;">
+    <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px">${up?'<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>':'<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>'}</svg>
+    ${up?'+':''}${change} ${t('today_word')}</span>`;
+  drawChart();
+}
+function drawChart(){
+  const svg = document.getElementById('chart-svg');
+  const w=600,h=220,pad=28;
+  const key = state.rateView==="22K" ? 'rate22' : 'rate24';
+  const values = HISTORY.map(d=>d[key]);
+  const min = Math.min(...values)-60, max = Math.max(...values)+60;
+  const stepX = (w-pad*2)/(HISTORY.length-1);
+  const scaleY = v => h-pad - ((v-min)/(max-min))*(h-pad*2);
+  const points = HISTORY.map((d,i)=>`${pad+i*stepX},${scaleY(d[key])}`).join(' ');
+
+  let gridLines = '';
+  for(let i=0;i<5;i++){ const y = pad + i*(h-pad*2)/4; gridLines += `<line x1="${pad}" y1="${y}" x2="${w-6}" y2="${y}" stroke="#E9E2D1" stroke-width="1"/>`; }
+
+  let labels = '';
+  HISTORY.forEach((d,i)=>{ if(i%6===0){ labels += `<text x="${pad+i*stepX}" y="${h-6}" fill="#8F8877" font-size="10" font-family="IBM Plex Mono, monospace" text-anchor="middle">${d.date}</text>`; } });
+
+  svg.innerHTML = `${gridLines}<polyline points="${points}" fill="none" stroke="#17150F" stroke-width="2.5"/>${labels}<rect id="chart-hover-area" x="${pad}" y="0" width="${w-pad-6}" height="${h}" fill="transparent"/><circle id="chart-dot" r="4" fill="#17150F" style="display:none"/>`;
+
+  const hoverArea = document.getElementById('chart-hover-area');
+  const dot = document.getElementById('chart-dot');
+  const tooltip = document.getElementById('chart-tooltip');
+  hoverArea.onmousemove = (e)=>{
+    const rect = svg.getBoundingClientRect();
+    const x = (e.clientX-rect.left) * (w/rect.width);
+    let idx = Math.round((x-pad)/stepX);
+    idx = Math.max(0, Math.min(HISTORY.length-1, idx));
+    const d = HISTORY[idx];
+    const cx = pad+idx*stepX, cy = scaleY(d[key]);
+    dot.setAttribute('cx', cx); dot.setAttribute('cy', cy); dot.style.display='block';
+    tooltip.style.display='block';
+    tooltip.textContent = `${d.date} · ₹${d[key].toLocaleString('en-IN')}`;
+    tooltip.style.left = Math.min(rect.width-120, Math.max(0,(cx/w)*rect.width)) + 'px';
+    tooltip.style.top = ((cy/h)*rect.height - 34) + 'px';
+  };
+  hoverArea.onmouseleave = ()=>{ dot.style.display='none'; tooltip.style.display='none'; };
+}
+
+/* ============================================================ CALCULATOR */
+function renderCalcSelectors(){
+  document.getElementById('jewelry-type').innerHTML = JEWELRY_TYPES.map(t=>`<option ${t===state.jewelryType?'selected':''}>${t}</option>`).join('');
+  document.getElementById('purity-row').innerHTML = Object.keys(PURITY_FACTOR).map(k=>`<button class="${k===state.purity?'active':''}" data-p="${k}">${k}</button>`).join('');
+  document.getElementById('weight-input').value = state.weight;
+
+  document.getElementById('jewelry-type').onchange = e=>{ state.jewelryType=e.target.value; renderAll(); };
+  document.querySelectorAll('#purity-row button').forEach(b=>{ b.onclick=()=>{ state.purity=b.dataset.p; renderCalcSelectors(); renderAll(); }; });
+  document.getElementById('weight-input').oninput = e=>{ state.weight = parseFloat(e.target.value)||0; renderAll(); };
+}
+function renderCalcResult(){
+  const w = parseFloat(state.weight)||0;
+  const goldContent = w*PURITY_FACTOR[state.purity];
+  const value = w*RATE_TODAY[state.purity];
+  document.getElementById('calc-value').textContent = fmtINR(value);
+  document.getElementById('calc-content').textContent = goldContent.toFixed(2)+' g';
+  document.getElementById('calc-rate').textContent = '₹'+RATE_TODAY[state.purity].toLocaleString('en-IN')+'/g';
+  document.getElementById('calc-item').textContent = state.jewelryType;
+  document.getElementById('calc-content').previousElementSibling.textContent = t('calc_content_label')+' ('+state.purity+')';
+  document.getElementById('calc-rate').previousElementSibling.textContent = t('calc_rate_label')+' ('+state.purity+')';
+}
+
+/* ============================================================ LOANS */
+function renderLoans(){
+  document.getElementById('interest-val').textContent = state.loanInterest.toFixed(1)+'%';
+  const w = parseFloat(state.weight)||10;
+  const filtered = LOAN_PROVIDERS.filter(p=> p.interest<=state.loanInterest && (state.loanType==='All'||p.type===state.loanType));
+  document.getElementById('loan-list').innerHTML = filtered.map(p=>{
+    const loanAmt = Math.min(p.maxAmt, Math.max(p.minAmt, w*p.ratePerGram*0.75));
+    const { total } = loanMath(p, loanAmt, state.loanTenure);
+    return `<div class="card loan-card">
+      <div class="loan-card-top">
+        <div><h3>${p.name}</h3><p><svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/></svg> ${p.type} ·
+          <svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--gold);fill:var(--gold)"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg> ${p.rating}</p>
+        </div>
+        <span class="badge badge-sm"><span>${p.interest}%</span></span>
+      </div>
+      <div class="loan-stats">
+        <div><p class="l">${t('l_rate_accepted')}</p><p class="v">₹${p.ratePerGram.toLocaleString('en-IN')}/g</p></div>
+        <div><p class="l">${t('l_est_loan')} ${w}g)</p><p class="v">${fmtINR(loanAmt)}</p></div>
+        <div><p class="l">${t('l_processing_fee')}</p><p class="v">${p.processingFee}%</p></div>
+        <div><p class="l">${t('l_tenure_options')}</p><p class="v">${p.tenure}</p></div>
+      </div>
+      <div class="loan-bottom">
+        <div><p class="l">${t('l_est_repay')}${state.loanTenure}mo)</p><p class="v">${fmtINR(total)}</p></div>
+        <button class="btn btn-sm" onclick='openModal(${JSON.stringify(p).replace(/'/g,"&apos;")})'>
+          <svg class="icon" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg> ${t('btn_contact')}</button>
+      </div>
+      <a class="direct-line" href="tel:${p.phone.replace(/\\s/g,'')}">
+        <svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--gold)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+        ${t('l_direct_line')} <span class="mono">${p.phone}</span>
+      </a>
+    </div>`;
+  }).join('') || `<p style="color:var(--muted)">${t('no_lenders')}</p>`;
+}
+
+/* ============================================================ JEWELRY */
+function renderJewelry(){
+  const w = parseFloat(state.weight)||8;
+  document.getElementById('jewelry-title').textContent = t('jewelry_title').replace('{type}', state.jewelryType.toLowerCase());
+  document.getElementById('jewelry-sub').textContent = t('jewelry_sub').replace('{w}', w).replace('{p}', state.purity);
+  const goldContent = w*PURITY_FACTOR[state.purity];
+  const goldValue = w*RATE_TODAY[state.purity];
+  document.getElementById('jewelry-tbody').innerHTML = JEWELRY_STORES.map(s=>{
+    const making = goldValue*(s.makingPct/100);
+    const gst = (goldValue+making)*0.03;
+    const final = goldValue+making+gst;
+    return `<tr>
+      <td>
+        <p class="store-name">${s.name}</p>
+        <p class="store-meta"><svg class="icon" viewBox="0 0 24 24" style="width:11px;height:11px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> ${s.city} · ${s.speciality}</p>
+        <a class="store-phone" href="tel:${s.phone.replace(/\\s/g,'')}"><svg class="icon" viewBox="0 0 24 24" style="width:11px;height:11px;color:var(--gold)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.35 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.33 1.53.56 2.34.68A2 2 0 0 1 22 16.92z"/></svg> ${s.phone}</a>
+      </td>
+      <td class="mono" style="color:var(--text2)">${s.makingPct}% · ${fmtINR(making)}</td>
+      <td class="mono" style="color:var(--text2)">${fmtINR(gst)}</td>
+      <td class="final-price">${fmtINR(final)}</td>
+      <td><button class="btn btn-outline btn-sm" onclick='openModal(${JSON.stringify(s).replace(/'/g,"&apos;")})'>${t('btn_contact')}</button></td>
+    </tr>`;
+  }).join('');
+}
+
+/* ============================================================ PARTNERS */
+function renderPartners(){
+  const names = [...LOAN_PROVIDERS.map(p=>p.name), ...JEWELRY_STORES.map(s=>s.name)];
+  document.getElementById('partners').innerHTML = names.map(n=>`<span>${n}</span>`).join('');
+}
+
+/* ============================================================ WASTAGE */
+function renderWastageSelectors(){
+  const sel = document.getElementById('wastage-type-select');
+  sel.innerHTML = WASTAGE_TYPES.map(t=>`<option ${t===state.jewelryType?'selected':''}>${t}</option>`).join('');
+  if(!WASTAGE_TYPES.includes(state.jewelryType)) sel.value = "Ring";
+  document.getElementById('wastage-weight-input').value = state.weight;
+  sel.onchange = renderWastage;
+  document.getElementById('wastage-weight-input').oninput = renderWastage;
+}
+function renderWastage(){
+  const type = document.getElementById('wastage-type-select').value;
+  const w = parseFloat(document.getElementById('wastage-weight-input').value)||0;
+  document.getElementById('wastage-tbody').innerHTML = JEWELRY_STORES.map(s=>{
+    const pct = STORE_WASTAGE[s.id][type];
+    const wastageWt = w*(pct/100);
+    const totalWt = w+wastageWt;
+    return `<tr>
+      <td><p class="store-name">${s.name}</p><p class="store-meta"><svg class="icon" viewBox="0 0 24 24" style="width:11px;height:11px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> ${s.city}</p></td>
+      <td class="mono" style="color:var(--text2)">${pct.toFixed(1)}%</td>
+      <td class="mono" style="color:var(--text2)">${wastageWt.toFixed(2)} g</td>
+      <td class="final-price">${totalWt.toFixed(2)} g</td>
+    </tr>`;
+  }).join('');
+}
+
+/* ============================================================ SHOP / CART / ORDERS */
+function saveCart(){ localStorage.setItem('thangam_cart', JSON.stringify(cart)); }
+function saveOrders(){ localStorage.setItem('thangam_orders', JSON.stringify(orders)); }
+
+function renderShopChips(){
+  const cats = ["All", ...new Set(PRODUCTS.map(p=>p.type))];
+  document.getElementById('shop-chips').innerHTML = cats.map(c=>`<button class="chip ${c===shopFilter.cat?'active':''}" data-cat="${c}">${c==='All'?t('chip_all'):c}</button>`).join('');
+  document.querySelectorAll('#shop-chips .chip').forEach(chip=>{
+    chip.onclick = ()=>{ shopFilter.cat = chip.dataset.cat; renderShopChips(); renderShop(); };
+  });
+}
+function productIcon(type){
+  const icons = {
+    Ring:'<circle cx="12" cy="12" r="7"/>',
+    Chain:'<path d="M8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0zM6 8a4 4 0 1 1 0 8"/>',
+    Necklace:'<path d="M4 4c0 8 4 12 8 12s8-4 8-12"/><circle cx="12" cy="18" r="2.5"/>',
+    Earrings:'<circle cx="8" cy="7" r="2"/><path d="M8 9v4l2 4"/><circle cx="16" cy="7" r="2"/><path d="M16 9v4l-2 4"/>',
+    Bracelet:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/>',
+    Bangle:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/>',
+    Coin:'<circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/>',
+  };
+  return `<svg class="icon" viewBox="0 0 24 24" style="width:44px;height:44px;color:var(--gold)">${icons[type]||icons.Ring}</svg>`;
+}
+function renderShop(){
+  let list = PRODUCTS.filter(p=>{
+    const store = JEWELRY_STORES.find(s=>s.id===p.storeId);
+    const hay = (p.name+' '+p.type+' '+p.purity+' '+store.name).toLowerCase();
+    const matchesQuery = !shopFilter.query || hay.includes(shopFilter.query.toLowerCase());
+    const matchesCat = shopFilter.cat==='All' || p.type===shopFilter.cat;
+    return matchesQuery && matchesCat;
+  });
+  list = list.map(p=>({...p, price: productPrice(p)}));
+  if(shopFilter.sort==='low') list.sort((a,b)=>a.price-b.price);
+  else if(shopFilter.sort==='high') list.sort((a,b)=>b.price-a.price);
+  else list.sort((a,b)=>b.popularity-a.popularity);
+
+  document.getElementById('shop-grid').innerHTML = list.map(p=>{
+    const store = JEWELRY_STORES.find(s=>s.id===p.storeId);
+    return `<div class="card product-card">
+      <div class="product-thumb">${productIcon(p.type)}</div>
+      <p class="product-name">${p.name}</p>
+      <p class="product-meta">${p.type} · ${p.purity} · ${p.weight}g · ${store.name}</p>
+      <p class="product-price">${fmtINR(p.price)}</p>
+      <div class="product-actions">
+        <button class="btn btn-outline" onclick="addToCart('${p.id}')">${t('btn_add_cart')}</button>
+        <button class="btn" onclick="addToCart('${p.id}'); toggleCart(true);">${t('btn_buy_now')}</button>
+      </div>
+    </div>`;
+  }).join('') || `<p style="color:var(--muted)">${t('shop_empty')}</p>`;
+}
+function addToCart(productId){
+  const existing = cart.find(c=>c.productId===productId);
+  if(existing) existing.qty += 1;
+  else cart.push({ productId, qty:1 });
+  saveCart(); renderCartBadge(); renderCart();
+}
+function removeFromCart(idx){ cart.splice(idx,1); saveCart(); renderCartBadge(); renderCart(); }
+function cartLines(){
+  return cart.map(c=>{
+    const p = PRODUCTS.find(x=>x.id===c.productId);
+    return { ...c, product:p, lineTotal: productPrice(p)*c.qty };
+  });
+}
+function renderCartBadge(){
+  const count = cart.reduce((n,c)=>n+c.qty,0);
+  const badge = document.getElementById('cart-count');
+  badge.textContent = count;
+  badge.style.display = count>0 ? 'flex' : 'none';
+}
+function renderCart(){
+  const lines = cartLines();
+  const body = document.getElementById('cart-body');
+  body.innerHTML = lines.length ? lines.map((l,i)=>`<div class="cart-item">
+    <div><p class="ci-name">${l.product.name}</p><p class="ci-meta">${l.product.type} · Qty ${l.qty}</p></div>
+    <div style="text-align:right;"><p class="mono" style="color:var(--gold-bright);font-size:13px;">${fmtINR(l.lineTotal)}</p><button class="ci-remove" onclick="removeFromCart(${i})">${t('btn_remove')}</button></div>
+  </div>`).join('') : `<p style="color:var(--muted);font-size:13px;">${t('cart_empty')}</p>`;
+  const total = lines.reduce((s,l)=>s+l.lineTotal,0);
+  document.getElementById('cart-total').textContent = fmtINR(total);
+}
+function toggleCart(open){
+  const drawer = document.getElementById('cart-drawer');
+  const overlay = document.getElementById('cart-overlay');
+  const show = open===undefined ? !drawer.classList.contains('open') : open;
+  drawer.classList.toggle('open', show);
+  overlay.classList.toggle('open', show);
+  if(show) renderCart();
+}
+function checkout(){
+  if(!cart.length) return;
+  const lines = cartLines();
+  const total = lines.reduce((s,l)=>s+l.lineTotal,0);
+  const order = {
+    id: 'TG' + Date.now().toString().slice(-8),
+    date: new Date().toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' }),
+    items: lines.map(l=>({ name:l.product.name, type:l.product.type, purity:l.product.purity, weight:l.product.weight, qty:l.qty, price:l.lineTotal })),
+    total,
+    status: 'processing',
+  };
+  orders.unshift(order);
+  cart = [];
+  saveCart(); saveOrders(); renderCartBadge(); renderCart(); renderOrders();
+  toggleCart(false);
+  go('dashboards'); setDashTab('customer');
+  alert(t('checkout_success').replace('{id}', order.id));
+}
+function orderStatusLabel(status){
+  return { processing:t('status_processing'), shipped:t('status_shipped'), delivered:t('status_delivered'), return_requested:t('status_return') }[status] || status;
+}
+function downloadInvoice(orderId){
+  const order = orders.find(o=>o.id===orderId);
+  if(!order) return;
+  const lines = order.items.map(i=>`${i.name} (${i.type}, ${i.purity}, ${i.weight}g) x${i.qty} — ${fmtINR(i.price)}`).join('\n');
+  const text = `THANGAM — TAX INVOICE\nOrder ID: ${order.id}\nDate: ${order.date}\n\n${lines}\n\nTotal: ${fmtINR(order.total)}\n\nThis is a demo invoice generated locally in your browser.`;
+  const blob = new Blob([text], { type:'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `Thangam-Invoice-${order.id}.txt`;
+  a.click();
+}
+function requestReturn(orderId){
+  const order = orders.find(o=>o.id===orderId);
+  if(!order) return;
+  const reason = prompt(t('return_prompt'));
+  if(reason===null) return;
+  order.status = 'return_requested';
+  order.returnReason = reason;
+  saveOrders(); renderOrders();
+  alert(t('return_submitted'));
+}
+function renderOrders(){
+  const list = document.getElementById('orders-list');
+  const empty = document.getElementById('orders-empty');
+  if(!orders.length){ list.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display='none';
+  list.innerHTML = orders.map(o=>`<div class="order-row">
+    <div class="order-top">
+      <div><p class="on">${o.id} · ${o.items.length} item${o.items.length>1?'s':''}</p><p class="od">${o.date} · ${fmtINR(o.total)}</p></div>
+      <span class="order-status">${orderStatusLabel(o.status)}</span>
+    </div>
+    <div class="order-actions">
+      <button onclick="downloadInvoice('${o.id}')">${t('btn_invoice')}</button>
+      ${o.status!=='return_requested' ? `<button onclick="requestReturn('${o.id}')">${t('btn_return')}</button>` : ''}
+    </div>
+  </div>`).join('');
+}
+
+/* ============================================================ EMI */
+function renderEmiSelectors(){
+  document.getElementById('emi-lender').innerHTML = LOAN_PROVIDERS.map(p=>`<option value="${p.id}">${p.name} — ${p.interest}% p.a.</option>`).join('');
+  document.getElementById('emi-lender').onchange = renderEmi;
+  document.getElementById('emi-amount').oninput = renderEmi;
+  document.getElementById('emi-tenure').oninput = ()=>{ document.getElementById('emi-tenure-label').textContent = 'Tenure: '+document.getElementById('emi-tenure').value+' months'; renderEmi(); };
+}
+function renderEmi(){
+  const lender = LOAN_PROVIDERS.find(p=>p.id===document.getElementById('emi-lender').value) || LOAN_PROVIDERS[0];
+  const amount = parseFloat(document.getElementById('emi-amount').value)||0;
+  const months = parseInt(document.getElementById('emi-tenure').value);
+  const { emi, total, interestPaid } = loanMath(lender, amount, months);
+  document.getElementById('emi-value').textContent = fmtINR(emi);
+  document.getElementById('emi-interest').textContent = fmtINR(interestPaid);
+  document.getElementById('emi-total').textContent = fmtINR(total);
+  document.getElementById('emi-rate').textContent = lender.interest+'% p.a.';
+}
+
+/* ============================================================ DASHBOARDS */
+function setDashTab(tab){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  document.querySelectorAll('.dash-panel').forEach(p=>p.classList.toggle('active', p.id==='dash-'+tab));
+}
+
+/* ============================================================ REVIEWS */
+let userReviews = JSON.parse(localStorage.getItem('thangam_user_reviews') || '[]');
+let reviewRating = 0;
+function saveUserReviews(){ localStorage.setItem('thangam_user_reviews', JSON.stringify(userReviews)); }
+
+function renderReviews(){
+  const approved = userReviews.filter(r=>r.status==='approved').map(r=>({ name:r.name, role:r.store, text:r.text, rating:r.rating, photo:r.photo }));
+  const all = [...approved, ...REVIEWS];
+  document.getElementById('reviews-grid').innerHTML = all.map(r=>`<div class="card review-card">
+    <div class="stars">${Array.from({length:5}).map((_,i)=>`<svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;${i<r.rating?'color:var(--gold);fill:var(--gold)':'color:#E2DBC8'}"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>`).join('')}</div>
+    ${r.photo ? `<img src="${r.photo}" class="pending-photo" style="max-height:120px;" />` : ''}
+    <p class="review-text">"${r.text}"</p>
+    <p class="review-name">${r.name}</p>
+    <p class="review-role">${r.role}</p>
+  </div>`).join('');
+}
+
+function openReviewModal(){
+  const sel = document.getElementById('review-store');
+  sel.innerHTML = JEWELRY_STORES.map(s=>`<option value="${s.id}">${s.name}</option>`).join('') + LOAN_PROVIDERS.map(p=>`<option value="${p.id}">${p.name}</option>`).join('');
+  reviewRating = 0;
+  renderStarPicker();
+  document.getElementById('review-name-input').value='';
+  document.getElementById('review-text-input').value='';
+  document.getElementById('review-photo-input').value='';
+  document.getElementById('review-photo-preview').style.display='none';
+  document.getElementById('review-photo-preview').removeAttribute('data-photo');
+  document.getElementById('review-form-wrap').style.display='block';
+  document.getElementById('review-success').classList.remove('show');
+  document.getElementById('review-overlay').classList.add('open');
+}
+function closeReviewModal(){ document.getElementById('review-overlay').classList.remove('open'); }
+function renderStarPicker(){
+  const wrap = document.getElementById('review-stars');
+  wrap.innerHTML = Array.from({length:5}).map((_,i)=>`<svg data-i="${i+1}" class="${i<reviewRating?'on':''}" viewBox="0 0 24 24" stroke="currentColor" fill="${i<reviewRating?'currentColor':'none'}" stroke-width="2"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>`).join('');
+  wrap.className = 'star-pick';
+  wrap.querySelectorAll('svg').forEach(s=>{ s.onclick = ()=>{ reviewRating = parseInt(s.dataset.i); renderStarPicker(); }; });
+}
+document.getElementById('review-photo-input').addEventListener('change', (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  if(file.size > 1_500_000){ alert('Photo is a bit large for this demo (browser storage only) — try one under 1.5MB.'); e.target.value=''; return; }
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    const preview = document.getElementById('review-photo-preview');
+    preview.src = reader.result;
+    preview.style.display='block';
+    preview.dataset.photo = reader.result;
+  };
+  reader.readAsDataURL(file);
+});
+function submitReview(){
+  const storeId = document.getElementById('review-store').value;
+  const store = [...JEWELRY_STORES, ...LOAN_PROVIDERS].find(s=>s.id===storeId);
+  const name = document.getElementById('review-name-input').value.trim() || 'Anonymous';
+  const text = document.getElementById('review-text-input').value.trim();
+  const photo = document.getElementById('review-photo-preview').dataset.photo || null;
+  if(!text || !reviewRating) { alert('Please add a rating and a short review.'); return; }
+  userReviews.unshift({ id:'R'+Date.now(), store: store.name, storeId, name, rating: reviewRating, text, photo, status:'pending' });
+  saveUserReviews();
+  document.getElementById('review-form-wrap').style.display='none';
+  document.getElementById('review-success').classList.add('show');
+  renderPendingReviews();
+}
+function moderateReview(id, approve){
+  const r = userReviews.find(x=>x.id===id);
+  if(!r) return;
+  r.status = approve ? 'approved' : 'rejected';
+  saveUserReviews();
+  renderPendingReviews();
+  renderReviews();
+}
+function renderPendingReviews(){
+  const pending = userReviews.filter(r=>r.status==='pending');
+  const list = document.getElementById('pending-reviews-list');
+  const empty = document.getElementById('pending-reviews-empty');
+  if(!pending.length){ list.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display='none';
+  list.innerHTML = pending.map(r=>`<div class="pending-row">
+    <div class="pending-top">
+      <div><p class="pn">${r.name} → ${r.store}</p><p class="pm">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</p></div>
+    </div>
+    ${r.photo ? `<img src="${r.photo}" class="pending-photo" />` : ''}
+    <p class="pending-text">"${r.text}"</p>
+    <div class="pending-actions">
+      <button class="pa-approve" onclick="moderateReview('${r.id}', true)">${t('btn_approve')}</button>
+      <button class="pa-reject" onclick="moderateReview('${r.id}', false)">${t('btn_reject')}</button>
+    </div>
+  </div>`).join('');
+}
+
+/* ============================================================ FAQ */
+function renderFaq(){
+  document.getElementById('faq-list').innerHTML = FAQS.map((f,i)=>`<div class="card faq-item" id="faq-${i}">
+    <button class="faq-q" onclick="toggleFaq(${i})">
+      <span>${f.q}</span>
+      <svg class="icon chev-down" viewBox="0 0 24 24" style="color:var(--muted)"><polyline points="6 9 12 15 18 9"/></svg>
+      <svg class="icon chev-up" viewBox="0 0 24 24" style="color:var(--gold)"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <p class="faq-a">${f.a}</p>
+  </div>`).join('');
+}
+function toggleFaq(i){
+  const el = document.getElementById('faq-'+i);
+  const wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));
+  if(!wasOpen) el.classList.add('open');
+}
+
+/* ============================================================ CONTACT FORM */
+function sendContact(){
+  document.getElementById('contact-form').style.display='none';
+  document.getElementById('contact-success').style.display='block';
+}
+
+/* ============================================================ MODAL */
+function openModal(target){
+  modalTarget = target;
+  document.getElementById('modal-name').textContent = target.name;
+  document.getElementById('modal-phone').textContent = target.phone;
+  document.getElementById('modal-call').href = 'tel:'+target.phone.replace(/\s/g,'');
+  document.getElementById('modal-amount-input').placeholder = target.ratePerGram ? 'Loan amount needed (₹)' : 'What are you looking for?';
+  document.getElementById('modal-name-input').value='';
+  document.getElementById('modal-phone-input').value='';
+  document.getElementById('modal-amount-input').value='';
+  document.getElementById('modal-form-wrap').style.display='block';
+  document.getElementById('modal-success').classList.remove('show');
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeModal(){ document.getElementById('modal-overlay').classList.remove('open'); }
+function submitModal(){
+  const name = document.getElementById('modal-name-input').value.trim();
+  const phone = document.getElementById('modal-phone-input').value.trim();
+  if(!name || !phone) return;
+  document.getElementById('modal-form-wrap').style.display='none';
+  document.getElementById('modal-success-text').textContent = `${modalTarget.name} will reach out to ${phone} shortly.`;
+  document.getElementById('modal-success').classList.add('show');
+}
+
+/* ============================================================ SEARCH */
+function setupSearch(inputId, boxId){
+  const input = document.getElementById(inputId);
+  const box = boxId ? document.getElementById(boxId) : null;
+  if(!input) return;
+  if(!box){
+    input.addEventListener('keydown', e=>{
+      if(e.key==='Enter'){
+        const q = input.value.trim().toLowerCase();
+        const match = SEARCH_INDEX.find(s=>s.label.toLowerCase().includes(q));
+        if(match) go(match.section);
+      }
+    });
+    return;
+  }
+  function renderSuggest(){
+    const q = input.value.trim().toLowerCase();
+    if(!q){
+      box.innerHTML = `<p class="label">${t('search_recent')}</p>` + recentSearches.map(r=>`<button class="recent" data-recent="${r}">${r}</button>`).join('') +
+        `<p class="label">${t('search_trending')}</p>` + TRENDING_SEARCHES.map(r=>`<button class="recent" data-recent="${r}">${r}</button>`).join('') +
+        `<div class="langs"><svg class="icon" viewBox="0 0 24 24" style="width:11px;height:11px"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg> English · தமிழ் · हिंदी</div>`;
+    } else {
+      const matches = SEARCH_INDEX.filter(s=>s.label.toLowerCase().includes(q)).slice(0,6);
+      box.innerHTML = matches.length ? matches.map(s=>`<button class="item" data-section="${s.section}" data-label="${s.label}">${s.label}<svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--muted2)"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>`).join('')
+        : `<p style="padding:14px 16px;color:var(--muted2);font-size:14px;">No matches — try "loan", "calculator" or a store name.</p>`;
+    }
+    box.querySelectorAll('[data-section]').forEach(b=>{
+      b.onmousedown = ()=>{
+        recentSearches = [b.dataset.label, ...recentSearches.filter(r=>r!==b.dataset.label)].slice(0,5);
+        input.value=''; box.classList.remove('open'); go(b.dataset.section);
+      };
+    });
+    box.querySelectorAll('[data-recent]').forEach(b=>{ b.onmousedown = ()=>{ input.value=b.dataset.recent; renderSuggest(); }; });
+  }
+  input.addEventListener('input', renderSuggest);
+  input.addEventListener('focus', ()=>{ renderSuggest(); box.classList.add('open'); });
+  input.addEventListener('blur', ()=> setTimeout(()=>box.classList.remove('open'),150));
+}
+function setupVoice(){
+  const micBtn = document.getElementById('mic-btn');
+  if(!micBtn) return;
+  micBtn.onclick = ()=>{
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if(!SR){ alert("Voice search isn't supported in this browser. Try typing instead."); return; }
+    const rec = new SR(); rec.lang='en-IN';
+    rec.onstart = ()=>micBtn.classList.add('listening');
+    rec.onend = ()=>micBtn.classList.remove('listening');
+    rec.onresult = e=>{ document.getElementById('search-input').value = e.results[0][0].transcript; document.getElementById('search-input').dispatchEvent(new Event('input')); };
+    rec.start();
+  };
+}
+
+/* ============================================================ RENDER ALL */
+function renderAll(){
+  renderCalcResult();
+  renderLoans();
+  renderJewelry();
+}
+
+/* ============================================================ LOCATION */
+function toggleManualLoc(){
+  const input = document.getElementById('loc-manual-input');
+  const isHidden = input.style.display === 'none';
+  input.style.display = isHidden ? 'inline-block' : 'none';
+  if(isHidden) input.focus();
+}
+function setLocText(text){
+  document.getElementById('loc-text').removeAttribute('data-i18n');
+  document.getElementById('loc-text').textContent = text;
+}
+function detectLocation(){
+  if(!navigator.geolocation){ setLocText(t('loc_unsupported')); return; }
+  setLocText(t('loc_detecting'));
+  navigator.geolocation.getCurrentPosition(async (pos)=>{
+    const { latitude, longitude } = pos.coords;
+    try{
+      const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}&zoom=14&addressdetails=1`, { headers: { 'Accept-Language': currentLang } });
+      const data = await res.json();
+      const a = data.address || {};
+      const city = a.city || a.town || a.village || a.municipality || a.suburb || '';
+      const district = a.state_district || a.county || '';
+      const state_ = a.state || '';
+      const country = a.country || '';
+      const pin = a.postcode ? ' · ' + a.postcode : '';
+      const parts = [city, district, state_, country].filter(Boolean).join(', ');
+      setLocText((parts || t('loc_unsupported')) + pin);
+      localStorage.setItem('thangam_location', parts + pin);
+    }catch(err){
+      setLocText(`${latitude.toFixed(3)}, ${longitude.toFixed(3)}`);
+    }
+  }, (err)=>{
+    setLocText(t('loc_denied'));
+  }, { enableHighAccuracy:false, timeout:10000 });
+}
+document.getElementById('loc-manual-input').addEventListener('keydown', e=>{
+  if(e.key==='Enter' && e.target.value.trim()){
+    setLocText(e.target.value.trim());
+    localStorage.setItem('thangam_location', e.target.value.trim());
+    document.getElementById('loc-manual-input').style.display='none';
+  }
+});
+(function initLocation(){
+  const saved = localStorage.getItem('thangam_location');
+  if(saved) setLocText(saved);
+})();
+
+/* ============================================================ INIT */
+document.getElementById('year').textContent = new Date().getFullYear();
+renderTicker();
+renderHero();
+renderRate();
+renderCalcSelectors();
+renderPartners();
+renderWastageSelectors();
+renderWastage();
+renderShopChips();
+renderShop();
+renderCartBadge();
+renderCart();
+renderOrders();
+renderEmiSelectors();
+renderEmi();
+renderReviews();
+renderPendingReviews();
+renderFaq();
+renderAll();
+setupSearch('search-input','suggest-box');
+setupSearch('search-input-m', null);
+setupVoice();
+applyLanguage(currentLang);
+
+/* ============================================================ WELCOME SCREEN */
+(function initWelcome(){
+  const screen = document.getElementById('welcome-screen');
+  if(sessionStorage.getItem('thangam_welcomed')){
+    screen.classList.add('hide');
+    setTimeout(()=>screen.remove(), 50);
+    return;
+  }
+  const particlesWrap = document.getElementById('welcome-particles');
+  for(let i=0;i<26;i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = 3 + Math.random()*6;
+    p.style.width = size+'px'; p.style.height = size+'px';
+    p.style.left = Math.random()*100+'%';
+    p.style.setProperty('--drift', (Math.random()*80-40)+'px');
+    p.style.animationDuration = (5+Math.random()*5)+'s';
+    p.style.animationDelay = (Math.random()*5)+'s';
+    particlesWrap.appendChild(p);
+  }
+  const fill = document.getElementById('welcome-bar-fill');
+  const loadingText = document.getElementById('welcome-loading');
+  const enterBtn = document.getElementById('welcome-enter');
+  let pct = 0;
+  setTimeout(()=>{
+    const timer = setInterval(()=>{
+      pct += 4 + Math.random()*6;
+      if(pct>=100){ pct=100; clearInterval(timer); loadingText.style.display='none'; enterBtn.style.display='inline-block'; enterBtn.classList.add('show'); }
+      fill.style.width = pct+'%';
+    }, 90);
+  }, 700);
+  function dismiss(){
+    sessionStorage.setItem('thangam_welcomed','1');
+    screen.classList.add('hide');
+    setTimeout(()=>screen.remove(), 650);
+  }
+  enterBtn.addEventListener('click', dismiss);
+  screen.addEventListener('click', (e)=>{ if(pct>=100) dismiss(); });
+})();
+
+document.getElementById('shop-search').addEventListener('input', e=>{ shopFilter.query = e.target.value; renderShop(); });
+document.getElementById('shop-sort').addEventListener('change', e=>{ shopFilter.sort = e.target.value; renderShop(); });
+document.getElementById('interest-range').addEventListener('input', e=>{ state.loanInterest = parseFloat(e.target.value); renderLoans(); });
+document.querySelectorAll('#type-chips .chip').forEach(chip=>{
+  chip.onclick = ()=>{ document.querySelectorAll('#type-chips .chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); state.loanType = chip.dataset.type; renderLoans(); };
+});
+document.getElementById('tenure-select').addEventListener('change', e=>{ state.loanTenure = parseInt(e.target.value); renderLoans(); });
+document.getElementById('hamburger').addEventListener('click', ()=>{ document.getElementById('mobilenav').classList.toggle('open'); });
+document.getElementById('lang-select').addEventListener('change', e=>applyLanguage(e.target.value));
+document.getElementById('lang-select-m').addEventListener('change', e=>applyLanguage(e.target.value));
+</script>
+</body>
+</html>
